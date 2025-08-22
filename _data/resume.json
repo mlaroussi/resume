@@ -1,0 +1,44 @@
+{
+  "name": "Mohammed Laroussi",
+  "title": "Linux / Infra / DevOps Engineer",
+  "location": "Tangier, Morocco",
+  "email": "you@example.com",
+  "links": [
+    {"label": "GitHub", "url": "https://github.com/yourhandle"},
+    {"label": "LinkedIn", "url": "https://www.linkedin.com/in/yourprofile"}
+  ],
+  "summary": "Linux/DevOps engineer focused on RHEL, Foreman/Katello, and large-scale automation. Builds secure images, hardens CI/CD, and runs content management for big fleets.",
+  "skills": ["RHEL 8/9/10","Foreman/Katello","Ansible","Packer","VMware vSphere","Kickstart","GPG/Repos","Networking","CI/CD","Bash","Python"],
+  "experience": [
+    {
+      "role": "Senior Linux/DevOps Engineer",
+      "company": "Your Company",
+      "dates": "2022–Present",
+      "bullets": [
+        "Foreman/Katello at 50k+ nodes; sync plan split, mirror optimization, automated Content View publish/promote.",
+        "RHEL migrations (8→9/10), module stream management, repo signing and key rotation.",
+        "Secure image pipeline (Kickstart+Packer+vSphere), CI hardening and compliance checks."
+      ]
+    },
+    {
+      "role": "Linux Systems Engineer",
+      "company": "Previous Company",
+      "dates": "2019–2022",
+      "bullets": [
+        "Fleet automation with Ansible; patch compliance, safe rollbacks.",
+        "Observability with Prometheus/Grafana; incident runbooks and SLOs."
+      ]
+    }
+  ],
+  "projects": [
+    {"name":"CV Auto-Publish for Katello","desc":"Webhooks + automation to publish & promote on new content","url":"https://github.com/yourhandle/project1"},
+    {"name":"Secure Kickstarts @ Scale","desc":"Reproducible builds, post-install hardening, SBOM export","url":"https://github.com/yourhandle/project2"},
+    {"name":"Packer/vSphere Golden Images","desc":"Parameterized builds with pre-flight checks","url":"https://github.com/yourhandle/project3"}
+  ],
+  "education": [
+    {"where": "Your University", "what": "BSc — Field", "extra": ""}
+  ],
+  "certs": ["RHCSA","RHCE"],
+  "languages": ["English","French","Arabic"],
+  "interests": ["Aviation","Space exploration","Cooking"]
+}
