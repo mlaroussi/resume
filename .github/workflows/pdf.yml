@@ -1,0 +1,32 @@
+name: Build PDF
+on:
+  push: { branches: [main] }
+permissions:
+  contents: write
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with: { ruby-version: '3.2' }
+      - run: gem install jekyll
+      - run: jekyll build
+      - run: npm i puppeteer
+      - name: Render PDF
+        run: |
+          node - <<'JS'
+          const p=require('puppeteer');
+          (async()=>{
+            const b=await p.launch({args:['--no-sandbox']});
+            const pg=await b.newPage();
+            await pg.goto('file://' + process.cwd() + '/_site/index.html', {waitUntil:'networkidle0'});
+            await pg.emulateMediaType('print');
+            await pg.pdf({path:'resume.pdf',format:'A4',printBackground:true,margin:{top:'12mm',right:'12mm',bottom:'12mm',left:'12mm'}});
+            await b.close();
+          })();
+          JS
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update resume.pdf"
+          file_pattern: resume.pdf
