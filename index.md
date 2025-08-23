@@ -20,7 +20,7 @@ title: "Mohammed Laroussi — Resume"
 
   <section>
     <h2>Core</h2>
-    <ul class="compact flat">
+    <ul class="compact tinyindent">
       {% for c in site.data.resume.core_competencies %}<li>{{ c }}</li>{% endfor %}
     </ul>
   </section>
@@ -34,10 +34,8 @@ title: "Mohammed Laroussi — Resume"
 
   <section>
     <h2>Languages</h2>
-    <ul class="langlist">
-      {% for l in site.data.resume.languages %}
-      <li><span class="lang">{{ l.name }}</span><em class="lvl">{{ l.level }}</em></li>
-      {% endfor %}
+    <ul class="tags">
+      {% for l in site.data.resume.languages %}<li>{{ l.name }} — {{ l.level }}</li>{% endfor %}
     </ul>
   </section>
 
@@ -50,7 +48,7 @@ title: "Mohammed Laroussi — Resume"
 
   <section>
     <h2>Certifications</h2>
-    <ul class="compact flat">
+    <ul class="compact tinyindent">
       {% for c in site.data.resume.certifications %}<li>{{ c }}</li>{% endfor %}
     </ul>
   </section>
