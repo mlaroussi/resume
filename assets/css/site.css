@@ -77,8 +77,11 @@ ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6
 ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;background:rgba(0,212,106,0.08)}
 
 /* Languages meter (overall bar per language) */
-ul.langs{list-style:none;padding:0;margin:.6rem 0 1.2rem;display:grid;gap:8px}
-ul.langs li{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+ul.langs{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0 1.2rem}
+ul.langs li{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:4px 8px;border:1px solid var(--accent);border-radius:0;background:rgba(0,212,106,0.08)}
+ul.langs .meter,ul.langs .lvl{display:none}
+ul.langs li:hover .meter{display:grid}
+ul.langs li:hover .lvl{display:inline}
 ul.langs .name{font-weight:600}
 .meter{display:grid;grid-auto-flow:column;gap:4px}
 .meter .cell{width:14px;height:8px;border:1px solid var(--accent);background:transparent}
@@ -166,6 +169,7 @@ h2 .bi{width:1.15em;margin-right:8px;text-align:center;vertical-align:.0em;color
   /* Muted text slightly darker, not black */
   .meta, .small, .dates { color:#555 !important }
   ul.tags li{background:transparent !important;border-color:#666 !important;color:#000}
+  ul.langs .meter{display:grid !important}
 
   .container{padding:0}
   .two-col{grid-template-columns:38% 62%;gap:5mm}
