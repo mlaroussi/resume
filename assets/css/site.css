@@ -16,7 +16,7 @@
 html{font:10.75pt/1.9 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;-webkit-text-size-adjust:100%}
 body{margin:0;color:var(--fg);background:var(--panel);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .container{$1background:transparent;$2}
-a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+a{color:var(--accent);text-decoration:none;/*border-bottom:1px dotted var(--accent)*/}
 a:hover{color:#a7f3ce;border-bottom-color:#a7f3ce}
 hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 
@@ -97,16 +97,13 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;backgr
 .print-btn:hover{filter:brightness(1.05)}
 .print-btn:active{transform:translateY(1px)}
 .print-btn:focus-visible{outline:2px solid #a7f3ce;outline-offset:2px}
-.print-btn::before{content:"⤓";font-weight:700}
 .print-btn:hover{filter:brightness(1.05);box-shadow:0 0 0 2px rgba(34,211,238,.25)}
 .print-btn:active{transform:translateY(1px)}
 .print-btn:focus-visible{outline:2px solid #a7f3ce;outline-offset:2px}
 
 /* Footer */
-footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:12px;margin-block-start:24px;margin-block-end:clamp(32px,6vh,120px);border-top:1px solid var(--line)}
+footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:12px;margin-block-start:24px;/*margin-block-end:clamp(32px,6vh,120px);*/border-top:1px solid var(--line)}
 footer .copyright{color:var(--muted);font-size:.9em}
-
-footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:12px;margin-block-start:24px;margin-block-end:clamp(32px,6vh,120px);border-top:1px solid var(--line)}
 
 /* Avoid ugly breaks */
 section,.item{break-inside:avoid;page-break-inside:avoid}
@@ -119,8 +116,8 @@ h2{break-after:avoid}
 
 /* Icon font alignment (consistent baselines + spacing) */
 .bi{display:inline-block;font-size:1em;line-height:1;vertical-align:.10em}
-h2 .bi{width:1.15em;margin-right:8px;text-align:center;vertical-align:.18em;color:var(--accent)}
-.meta .bi{width:1.15em;margin-right:6px;text-align:center;vertical-align:.12em;color:var(--muted)}
+h2 .bi{width:1.15em;margin-right:8px;text-align:center;vertical-align:.0em;color:var(--accent)}
+.meta .bi{width:1.15em;margin-right:6px;text-align:center;vertical-align:.0em;color:var(--muted)}
 .print-btn .bi{margin-right:8px;vertical-align:.12em}
 @media print{.bi{color:#000 !important}}
 
