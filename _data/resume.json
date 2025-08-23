@@ -112,9 +112,9 @@
     "DNS/DHCP","Mail/Web/DB stacks","iptables","Git","Jira","Confluence"
   ],
   "languages": [
-    {"name":"Arabic","level":"Native/Bilingual","score":"5"},
-    {"name":"French","level":"Native/Bilingual","score":"4"},
-    {"name":"English","level":"Full Professional","score":"5"}
+    {"name":"English","level":"Excellent","score":5},
+    {"name":"French","level":"Fluent","score":4},
+    {"name":"Arabic","level":"Native","score":5}
   ],
   "interests": ["Aviation","Photography","Diving","Traveling"]
 }
