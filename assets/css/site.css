@@ -5,6 +5,8 @@
   --bg:#ffffff;
   --accent:#2563eb;       /* blue-600 */
   --max: 1000px;
+  /* responsive list indent: scales with font-size, bounded */
+  --indent: clamp(14px, 1.25em, 22px);
 }
 *{box-sizing:border-box}
 html{font:12.25pt/1.6 system-ui,-apple-system,"Segoe UI",Inter,Roboto,Arial}
@@ -35,7 +37,7 @@ section{margin:28px 0 30px 0}
 section h2{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin:.55rem 0 .9rem;color:var(--accent)}
 
 /* Lists */
-ul.compact{margin:.28rem 0 1rem .28rem}
+ul.compact{margin:.28rem 0 1rem 0; padding-inline-start:var(--indent)}
 ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0}
 ul.tags li{padding:5px 10px;border:1px solid var(--line);border-radius:999px}
 
@@ -60,6 +62,8 @@ ul.langlist .lvl{font-style:normal;color:var(--muted);font-size:.95em}
 
 /* Print tuning: keep to one A4 page; spacing tighter on paper */
 @media print{
+  /* tighten indent slightly on paper */
+  :root{ --indent: clamp(12px, 1.1em, 18px); }
   @page{size:A4;margin:10mm}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .no-print{display:none !important}
@@ -70,7 +74,7 @@ ul.langlist .lvl{font-style:normal;color:var(--muted);font-size:.95em}
   section{margin:10px 0 10px 0}
   section h2{margin:.35rem 0 .5rem}
   .item{margin-bottom:.45rem}
-  ul.compact{margin:.15rem 0 .5rem .5rem}
+  ul.compact{margin:.15rem 0 .5rem 0; padding-inline-start:var(--indent)}
   ul.langlist li{padding:2px 6px;margin-bottom:3px;border-color:#eceff3}
 }
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
