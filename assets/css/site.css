@@ -85,7 +85,8 @@ h2{break-after:avoid}
   -webkit-print-color-adjust:exact;print-color-adjust:exact;
 
   /* Smaller print font only */
-  html{font:8.75pt/1.28 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+  html{font:8pt/1.25 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+
 
 
   /* Hide screen-only UI */
@@ -96,7 +97,7 @@ h2{break-after:avoid}
   a{color:#000 !important;text-decoration:none;border:0}
   hr{border-top:1px solid #000}
   section h2{color:#000;margin:.3rem 0 .45rem}
-  .meta, .small, .dates { color:#333 !important }
+  .meta, .small, .dates { color:#666 !important }
 
   /* Layout tightening */
   .container{padding:0}
@@ -107,5 +108,5 @@ h2{break-after:avoid}
   /* Lists */
   :root{ --indent: clamp(11px, 1em, 16px); }
   ul.compact{margin:.1rem 0 .4rem 0; padding-left:var(--indent); padding-inline-start:var(--indent)}
-  ul.tags li{background:transparent !important;border-color:#000 !important;color:#000}
+  ul.tags li{background:transparent !important;border-color:#666 !important;color:#000}
 }
