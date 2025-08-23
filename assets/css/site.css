@@ -7,7 +7,7 @@
   --accent:#00d46a;       /* terminal green */
   --accent-2:#22d3ee;     /* cyan for alt accents */
   --max: 1280px;          /* max readable width when boxed */
-  --measure: 120ch;       /* target max line length (content-driven) */
+  --measure: 115ch;       /* target max line length (content-driven) */
   --indent: clamp(14px, 1.25em, 22px); /* responsive bullet indent */
   --panel:#0e1419;        /* slightly lighter panel for boxed layout */
   --pad: clamp(12px, 3vw, 34px); /* responsive side padding */
@@ -18,8 +18,10 @@ body{margin:0;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antial
 .container{
   max-inline-size: min(100%, var(--measure));
   margin-inline: auto;
-  padding-block: 24px;
+  padding-block: 30px; /* a touch more breathing room */
   padding-inline: var(--pad);
+  background: var(--panel); /* enabled by default */
+  margin-block-end: clamp(24px, 5vh, 80px); /* keep content off the bottom edge */
   container-type: inline-size; /* enable container queries */
 }
 a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
