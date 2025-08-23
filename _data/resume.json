@@ -1,6 +1,6 @@
 {
   "name": "Mohammed Laroussi",
-  "title": "Linux Expert (LFCS/LFCE) · Cloud (AWS) · Virtualization (VCP) · SysOps/Automation · ITSM",
+  "title": "Linux Expert (LFCS/LFCE) · VCP‑DCV · Systems & Automation",
   "location": "Casablanca, Morocco",
   "phone": "+212 638 385 809",
   "email": "mnlaroussi@gmail.com",
@@ -9,14 +9,14 @@
     { "label": "GitHub", "url": "https://github.com/mlaroussi" },
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/mlaroussi" }
   ],
-  "summary": "Linux/Infra engineer with deep experience across RHEL/Ubuntu, automation, and secure image engineering. Led OS master template design, compliance hardening, and high-scale operations for physical, VMware ESXi, and container environments. Writes clear documentation (EN/FR), mentors teams, and ships robust systems balancing security, performance, and operability. (LFCS, LFCE, VCP-DCV 2023)",
+  "summary": "Linux engineer focused on RHEL/Ubuntu, reproducible image pipelines, and secure systems. I design and maintain OS master templates for physical/ESXi/Docker targets, enforce hardening (SELinux, systemd, CIS‑style baselines), and automate everything with Bash/Python. Comfortable toggling between deep‑dive debugging and clean docs (EN/FR).",
   "core_competencies": [
-    "Linux Engineering (RHEL/CentOS, Ubuntu; systemd, SELinux, packaging, repo/GPG)",
-    "Automation & CI/CD (Bash, Python, Terraform; pipeline hardening; image builds)",
-    "Virtualization & Containers (VMware vSphere/ESXi, Docker)",
-    "Cloud & Infra (AWS/Azure basics, DNS/DHCP, mail/web/db stacks, VPN/firewalling)",
-    "Ops/SRE (monitoring, performance, incident response, runbooks, docs EN/FR)",
-    "Security & Compliance (baselines, hardening, audit & remediation)"
+    "Linux engineering (RHEL/CentOS, Ubuntu; systemd, SELinux, packaging, repo/GPG)",
+    "Image engineering (Kickstart/PXE, Packer, vSphere golden images, Docker)",
+    "Automation (Bash, Python; idempotent tooling; CI patterns)",
+    "Infra & services (DNS/DHCP, mail/web/db stacks; networking & firewalls)",
+    "Ops & SRE (observability, performance, incident response, runbooks)",
+    "Security & compliance (baseline hardening, audit & remediation)"
   ],
   "experience": [
     {
@@ -25,15 +25,13 @@
       "location": "Rabat",
       "dates": "Jan 2024 – Present",
       "bullets": [
-        "Design & maintain Linux OS master templates (RHEL/Ubuntu) for physical, ESX and Docker images",
-        "Provide technical direction; ensure security and quality compliance for deployments",
-        "Install, configure and operate Linux servers; troubleshoot complex builds",
-        "Author FR/EN documentation (specs, bulletins, guidelines)",
-        "Build/optimize automation scripts for provisioning, validation and lifecycle tasks",
-        "Collaborate with cross-functional teams; mentor members; coordinate timelines and reviews",
-        "Perform QA/code reviews and continuous improvement in Agile (Jira/Confluence)"
+        "Own the design and maintenance of Linux OS master templates (RHEL/Ubuntu) for physical, ESXi and Docker targets.",
+        "Codify hardening: SELinux enforcing, secure systemd units, SSH/MOTD/governance, repo signing (GPG) and rotation.",
+        "Build small but sharp automation (Bash/Python) for provisioning/validation; keep PRs reviewable and lint‑clean.",
+        "Author crisp FR/EN docs: specs, guidelines, operational bulletins.",
+        "Collaborate across teams; mentor peers; drive QA and code reviews in Agile (Jira/Confluence)."
       ],
-      "tech": ["RHEL","Ubuntu","VMware ESXi","Docker","Bash","Python","Jira","Confluence"]
+      "tech": ["RHEL","Ubuntu","VMware ESXi","Docker","Kickstart","Packer","Bash","Python","GPG"]
     },
     {
       "role": "Senior Linux Systems Engineer",
@@ -41,9 +39,8 @@
       "location": "Casablanca",
       "dates": "Jun 2022 – Dec 2023",
       "bullets": [
-        "Ensured availability, reliability, performance and security of IT systems",
-        "Contributed to structuring projects and provided advanced technical support",
-        "Supported L3 technicians and helped grow team capabilities"
+        "Kept business‑critical systems available, fast, and secure; handled performance deep dives and incident response.",
+        "Supported L3 engineers; helped structure projects and standardize operating procedures."
       ]
     },
     {
@@ -52,12 +49,11 @@
       "location": "Tangier",
       "dates": "Jun 2020 – May 2022",
       "bullets": [
-        "Designed tailored architectures and security policies",
-        "Installed/configured web, DB, mail and DNS services",
-        "Automated ops via scripting; provided technical support and documentation",
-        "Maintained several web apps (features, bug fixes, performance refactors)"
+        "Designed tailored architectures and security policies; delivered installs/config for web, DB, mail, DNS.",
+        "Automated routine ops with scripts; wrote documentation and provided long‑term support.",
+        "Maintained several web apps: features, bug fixes, and performance refactors."
       ],
-      "tech": ["Apache","MySQL","PostgreSQL","PowerMTA","Postfix","Bind","PowerDNS","Linux","AWS","Azure","Python","Bash","PHP","JS","HTML","CSS","Git"]
+      "tech": ["Apache","Nginx","MySQL","PostgreSQL","PowerMTA","Postfix","Bind","PowerDNS","Linux","AWS","Azure","Python","Bash","PHP","JS","HTML","CSS","Git"]
     },
     {
       "role": "IT Systems Engineer",
@@ -65,13 +61,10 @@
       "location": "Tangier",
       "dates": "Sep 2016 – Mar 2020",
       "bullets": [
-        "Monitored systems and network communications",
-        "Conceived strategies and configurations for services and infrastructure",
-        "Designed/deployed security policies (netfilter/iptables)",
-        "Developed internal tools (Bash/PHP/Python) and provided L3 support",
-        "Oversaw support team and tutored new members"
-      ],
-      "tech": ["Linux","CentOS","Apache","MySQL","Postfix","PowerMTA","PowerDNS","iptables","Bash","PHP","Python"]
+        "Monitored systems and network comms; designed strategies and service configurations.",
+        "Implemented security policies (netfilter/iptables); built internal tools (Bash/PHP/Python).",
+        "Provided L3 support; onboarded and tutored new team members."
+      ]
     },
     {
       "role": "IT Systems Administrator",
@@ -79,11 +72,9 @@
       "location": "Tangier",
       "dates": "Jun 2015 – Sep 2016",
       "bullets": [
-        "Managed hundreds of dedicated/VPS servers remotely",
-        "Linux admin (CentOS/RHEL); configured web/DB/mail/DNS and network services",
-        "Performed periodic maintenance and updates; L1/L2 support; software troubleshooting"
-      ],
-      "tech": ["RHEL","CentOS","Apache","Nginx","MySQL","Postfix","PowerMTA","PowerDNS","Bash"]
+        "Managed a few hundred dedicated/VPS servers remotely (Linux admin: CentOS/RHEL).",
+        "Configured web/DB/mail/DNS and system‑level networking; ran maintenance/updates and L1/L2 support."
+      ]
     },
     {
       "role": "Web Developer",
@@ -91,12 +82,15 @@
       "location": "Tangier",
       "dates": "Mar 2014 – Jun 2015",
       "bullets": [
-        "Client discovery and requirements gathering",
-        "Built AMP-stack sites/webapps and CMS solutions (WordPress/Drupal)",
-        "Provided support and technical assistance"
-      ],
-      "tech": ["Apache","PHP","MySQL","HTML","CSS","JS","WordPress","Drupal"]
+        "Gathered requirements; built AMP‑stack sites/webapps and CMS solutions (WordPress/Drupal).",
+        "Provided support and technical assistance."
+      ]
     }
+  ],
+  "projects": [
+    {"name":"OS Master Templates @ Scale","desc":"Standardized images for physical/ESXi/Docker with codified hardening and validation.","url":"#"},
+    {"name":"Secure Kickstarts & Golden Images","desc":"Reproducible Packer/vSphere builds; post‑install hardening; baseline validation.","url":"#"},
+    {"name":"Repo/GPG Governance","desc":"Key rotation, signature enforcement, and streamlined mirror/sync strategies.","url":"#"}
   ],
   "education": [
     {"degree": "M.Sc. — IT Systems & Security Engineering", "institution": "ENSI (Tangier)"},
@@ -105,16 +99,16 @@
     {"degree": "Specialized IT Technician — Multimedia Development", "institution": "ISMONTIC (Tangier)"}
   ],
   "certifications": [
-    "VMware Certified Professional — Data Center Virtualization 2023 (VCP-DCV)",
+    "VMware Certified Professional — Data Center Virtualization (VCP‑DCV)",
     "Linux Foundation Certified Engineer (LFCE)",
     "Linux Foundation Certified System Administrator (LFCS)",
     "Microsoft Office Specialist",
     "Duolingo Certified Educator"
   ],
   "skills": [
-    "RHEL/CentOS","Ubuntu","systemd","SELinux","Repo/GPG","Bash","Python","Terraform",
-    "VMware vSphere/ESXi","Docker","AWS/Azure basics","DNS/DHCP","Mail/Web/DB stacks",
-    "iptables","Git","Jira","Confluence","WordPress/Drupal (legacy)"
+    "RHEL/CentOS","Ubuntu","systemd","SELinux","Repo/GPG","Kickstart","PXE","Packer",
+    "VMware vSphere/ESXi","Docker","Bash","Python","Terraform",
+    "DNS/DHCP","Mail/Web/DB stacks","iptables","Git","Jira","Confluence"
   ],
   "languages": [
     {"name":"Arabic","level":"Native/Bilingual"},

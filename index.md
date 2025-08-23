@@ -7,66 +7,83 @@ title: "Mohammed Laroussi — Resume"
   <div>
     <h1>{{ site.data.resume.name }}</h1>
     <div class="subtitle">{{ site.data.resume.title }}</div>
-    <div class="meta">{{ site.data.resume.location }} · <a href="mailto:{{ site.data.resume.email }}">{{ site.data.resume.email }}</a></div>
+    <div class="meta">{{ site.data.resume.location }} · <a href="mailto:{{ site.data.resume.email }}">{{ site.data.resume.email }}</a> · {{ site.data.resume.phone }}</div>
   </div>
 </div>
 
 <hr/>
 
-{{ site.data.resume.summary }}
+<div class="two-col">
+  <div class="col">
 
-<section>
-  <h2>Experience</h2>
-  {% for job in site.data.resume.experience %}
-  <div class="item">
-    <span class="role">{{ job.role }}</span> — <span class="company">{{ job.company }}</span> · <span class="dates">{{ job.dates }}</span>
+  {{ site.data.resume.summary }}
+
+  <section>
+    <h2>Core</h2>
     <ul class="compact">
-      {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
+      {% for c in site.data.resume.core_competencies %}<li>{{ c }}</li>{% endfor %}
     </ul>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul class="tags">
+      {% for s in site.data.resume.skills %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <div class="small">{% for l in site.data.resume.languages %}{{ l.name }} — {{ l.level }}{% if forloop.last == false %} · {% endif %}{% endfor %}</div>
+  </section>
+
+  <section>
+    <h2>Links</h2>
+    <div class="small">{% for l in site.data.resume.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% if forloop.last == false %} · {% endif %}{% endfor %}</div>
+  </section>
+
   </div>
-  {% endfor %}
-</section>
+  <div class="col">
 
-<section>
-  <h2>Selected Projects</h2>
-  <ul class="compact">
-    {% for p in site.data.resume.projects %}
-    <li><strong><a href="{{ p.url }}">{{ p.name }}</a></strong> — {{ p.desc }}</li>
+  <section>
+    <h2>Experience</h2>
+    {% for job in site.data.resume.experience %}
+    <div class="item">
+      <span class="role">{{ job.role }}</span> — <span class="company">{{ job.company }}</span> · <span class="dates">{{ job.dates }}</span>
+      <ul class="compact">
+        {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+    </div>
     {% endfor %}
-  </ul>
-</section>
+  </section>
 
-<section>
-  <h2>Skills</h2>
-  <ul class="tags">
-    {% for s in site.data.resume.skills %}<li>{{ s }}</li>{% endfor %}
-  </ul>
-</section>
+  <section>
+    <h2>Projects</h2>
+    <ul class="compact">
+      {% for p in site.data.resume.projects %}
+      <li><strong>{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</strong> — {{ p.desc }}</li>
+      {% endfor %}
+    </ul>
+  </section>
 
-<section>
-  <h2>Education</h2>
-  <ul class="compact">
-    {% for e in site.data.resume.education %}<li>{{ e.what }} — {{ e.where }} {{ e.extra }}</li>{% endfor %}
-  </ul>
-</section>
+  <section>
+    <h2>Education</h2>
+    <ul class="compact">
+      {% for e in site.data.resume.education %}<li>{{ e.degree }} — {{ e.institution }}</li>{% endfor %}
+    </ul>
+  </section>
 
-<section>
-  <h2>Certifications</h2>
-  <ul class="compact">
-    {% for c in site.data.resume.certs %}<li>{{ c }}</li>{% endfor %}
-  </ul>
-</section>
+  <section>
+    <h2>Certifications</h2>
+    <ul class="compact">
+      {% for c in site.data.resume.certifications %}<li>{{ c }}</li>{% endfor %}
+    </ul>
+  </section>
 
-<section>
-  <h2>Languages</h2>
-  {{ site.data.resume.languages | join: ", " }}
-</section>
+  <section>
+    <h2>Interests</h2>
+    <div class="small">{{ site.data.resume.interests | join: " · " }}</div>
+  </section>
 
-<section>
-  <h2>Interests</h2>
-  {{ site.data.resume.interests | join: " · " }}
-</section>
-
----
-
-*Links:* {% for l in site.data.resume.links %}[{{ l.label }}]({{ l.url }}){% if forloop.last == false %} · {% endif %}{% endfor %}
+  </div>
+</div>
