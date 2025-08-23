@@ -76,7 +76,7 @@ ul.langlist .lvl{font-style:normal;color:var(--muted);font-size:.95em}
   .item{margin-bottom:.45rem}
   ul.compact{margin:.15rem 0 .5rem 0; padding-inline-start:var(--indent)}
   ul.langlist li{padding:2px 6px;margin-bottom:3px;border-color:#eceff3}
-}
+} 
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .no-print{display:none !important}
   a{text-decoration:none}
