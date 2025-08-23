@@ -27,9 +27,10 @@ hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 /* Man-page top ruler */
 .manbar{
   font:10pt ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
-  display:flex;justify-content:space-between;gap:12px;
+  display:flex;justify-content:space-between;gap:12px;box-sizing:border-box;
+  width:100%;max-width:var(--max);
   border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);
-  padding:4px 0;margin:0 0 12px;color:var(--fg)
+  padding:4px 34px;margin:0 auto 12px;color:var(--fg)
 }
 
 /* Intro full width */
@@ -47,7 +48,7 @@ section h2{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin:.
 /* Lists */
 ul.compact{margin:.28rem 0 1rem 0; padding-left:var(--indent); padding-inline-start:var(--indent)}
 ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0}
-ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;background:rgba(0,212,106,0.08)}
+ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;background:rgba(0,212,106,0.08)}
 
 /* Items */
 .item{margin-bottom:1rem}
@@ -59,10 +60,13 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;back
 /* Download button (stand-out cyan) */
 .print-btn{
   -webkit-appearance:none;appearance:none;display:inline-flex;align-items:center;gap:8px;
-  padding:6px 12px;border:1px solid var(--accent-2);border-radius:4px;
+  padding:6px 12px;border:1px solid var(--accent-2);border-radius:0;
   background:var(--accent-2);color:#0b0f12;cursor:pointer;font:inherit;font-weight:600;letter-spacing:.02em;line-height:1.2;background-clip:padding-box;
-  box-shadow:0 1px 0 rgba(0,0,0,.25), 0 0 0 2px rgba(34,211,238,.12) inset
 }
+.print-btn::before{content:"⤓";font-weight:700}
+.print-btn:hover{filter:brightness(1.05)}
+.print-btn:active{transform:translateY(1px)}
+.print-btn:focus-visible{outline:2px solid #a7f3ce;outline-offset:2px}
 .print-btn::before{content:"⤓";font-weight:700}
 .print-btn:hover{filter:brightness(1.05);box-shadow:0 0 0 2px rgba(34,211,238,.25)}
 .print-btn:active{transform:translateY(1px)}
