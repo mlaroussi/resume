@@ -50,10 +50,22 @@ title: "Mohammed Laroussi — Resume"
 
   <section>
     <h2><i class="bi bi-translate"></i> Languages</h2>
-    <ul class="tags">
-      {% for l in site.data.resume.languages %}<li>{{ l.name }} — {{ l.level }}</li>{% endfor %}
+    <ul class="langs">
+      {% for l in site.data.resume.languages %}
+      {% assign n = l.score | default: 4 %}
+      <li>
+        <span class="name">{{ l.name }}</span>
+        <span class="meter" aria-label="Overall proficiency {{ n }}/5">
+          {% for i in (1..5) %}
+          <span class="cell {% if i <= n %}on{% endif %}"></span>
+          {% endfor %}
+        </span>
+        {% if l.level %}<span class="lvl small no-print">{{ l.level }}</span>{% endif %}
+      </li>
+      {% endfor %}
     </ul>
   </section>
+
 
   <section>
     <h2><i class="bi bi-heart"></i> Interests</h2>

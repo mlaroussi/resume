@@ -159,6 +159,14 @@ h2 .bi{width:1.15em;margin-right:8px;text-align:center;vertical-align:.0em;color
   .meta, .small, .dates { color:#555 !important }
   ul.tags li{background:transparent !important;border-color:#666 !important;color:#000}
 
+  /* Languages meter (overall bar per language) */
+  ul.langs{list-style:none;padding:0;margin:.6rem 0 1.2rem;display:grid;gap:8px}
+  ul.langs li{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  ul.langs .name{font-weight:600}
+  .meter{display:grid;grid-auto-flow:column;gap:4px}
+  .meter .cell{width:14px;height:8px;border:1px solid var(--accent);background:transparent}
+  .meter .cell.on{background:var(--accent)}
+
   .container{padding:0}
   .two-col{grid-template-columns:38% 62%;gap:5mm}
   section{margin:8px 0}
