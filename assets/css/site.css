@@ -1,4 +1,3 @@
-
 :root{
   --fg:#e5e7eb;           /* terminal fg (light) */
   --muted:#9aa4b2;        /* terminal muted */
@@ -64,9 +63,7 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;back
 .small{font-size:.97em;color:var(--muted)}
 
 /* Screen-only: extra line spacing + justified text */
-@media not print{
-  /* Terminal look on screen */
-  html{line-height:1.9}
+
   body{background:var(--bg);color:var(--fg)}
   .meta{color:var(--muted)}
   a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
@@ -120,6 +117,34 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;back
 }
 
 /* Print tuning: keep to one A4 page; spacing tighter on paper */
+/* Screen defaults (apply unless printing) */
+html{line-height:1.9}
+body{background:var(--bg); color:var(--fg)}
+.meta{color:var(--muted)}
+a{color:var(--accent); text-decoration:none; border-bottom:1px dotted var(--accent)}
+a:hover{color:#a7f3ce; border-bottom-color:#a7f3ce}
+.manbar{border-top:1px solid var(--accent); border-bottom:1px solid var(--accent); color:var(--fg)}
+hr{border-top:1px solid var(--line)}
+.no-print{display:block}
+footer.no-print{display:flex}
+/* Unify and highlight the PDF button */
+.print-btn{
+  -webkit-appearance:none; appearance:none;
+  display:inline-flex; align-items:center; gap:8px;
+  padding:6px 12px;
+  border:1px solid var(--accent-2);
+  border-radius:4px;
+  background:var(--accent-2);
+  color:#0b0f12;
+  cursor:pointer; font:inherit; font-weight:600; letter-spacing:.02em; line-height:1.2; background-clip:padding-box;
+  box-shadow:0 1px 0 rgba(0,0,0,.25), 0 0 0 2px rgba(34,211,238,.12) inset;
+}
+.print-btn::before{content:"⤓";font-weight:700}
+.print-btn:hover{filter:brightness(1.05);box-shadow:0 0 0 2px rgba(34,211,238,.25)}
+.print-btn:active{transform:translateY(1px)}
+.print-btn:focus-visible{outline:2px solid #a7f3ce;outline-offset:2px}
+
+/* PRINT OVERRIDES */
 @media print{
   /* Force white background and black text for print */
   @page{size:A4;margin:10mm}
