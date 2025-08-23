@@ -52,7 +52,9 @@ title: "Mohammed Laroussi — Resume"
     <h2><i class="bi bi-translate"></i> Languages</h2>
     <ul class="langs">
       {% for l in site.data.resume.languages %}
-      {% assign n = l.score | default: 4 %}
+      {% assign n = l.score | default: 4 | plus: 0 %}
+      {% if n > 5 %}{% assign n = 5 %}{% endif %}
+      {% if n < 0 %}{% assign n = 0 %}{% endif %}
       <li>
         <span class="name">{{ l.name }}</span>
         <span class="meter" aria-label="Overall proficiency {{ n }}/5">
