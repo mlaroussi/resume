@@ -31,12 +31,16 @@ hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 .manbar{
   font:10pt ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
   display:flex;justify-content:space-between;gap:12px;box-sizing:border-box;
-  inline-size: min(100%, var(--measure));
-  margin-inline:auto; margin-block-end:12px;
-  padding:4px var(--pad); color:var(--fg);
+  width:100%;max-width:var(--measure);
+  margin:0 auto 12px;
+  padding:4px var(--pad);
+  color:var(--fg);
   position:relative; /* edge-to-edge rulers via pseudo elements */
 }
-.manbar::before,.manbar::after{content:"";position:absolute;left:50%;transform:translateX(-50%);width:100vw;border-top:1px solid var(--accent)}
+.manbar::before,.manbar::after{
+  content:"";position:absolute;left:50%;transform:translateX(-50%);
+  width:100vw;border-top:1px solid var(--accent)
+}
 .manbar::before{top:0}
 .manbar::after{bottom:0}
 .manbar::before,.manbar::after{
@@ -96,7 +100,7 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;backgr
 
 /* Footer */
 .no-print{display:block}
-footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:10px}
+footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:10px;margin-block-end:clamp(32px,8vh,140px)}
 
 /* Avoid ugly breaks */
 section,.item{break-inside:avoid;page-break-inside:avoid}
