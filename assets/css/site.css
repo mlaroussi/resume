@@ -76,18 +76,27 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;back
   .print-btn{
   -webkit-appearance:none;
   appearance:none;
-  display:inline-block;
-  padding:4px 8px;
-  border:1px solid var(--accent);
-  border-radius:2px;
-  background:rgba(0,212,106,0.08);
-  color:var(--fg);
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 12px;
+  border:1px solid var(--accent-2);
+  border-radius:4px;
+  background:var(--accent-2);
+  color:#0b0f12; /* dark text on cyan for contrast */
   cursor:pointer;
   font:inherit;
+  font-weight:600;
+  letter-spacing:.02em;
   line-height:1.2;
   background-clip:padding-box;
+  box-shadow:0 1px 0 rgba(0,0,0,.25), 0 0 0 2px rgba(34,211,238,.12) inset;
 }
-  .print-btn:hover{background:rgba(0,212,106,0.16)}
+.print-btn::before{content:"⤓";font-weight:700}
+
+  .print-btn:hover{filter:brightness(1.05);box-shadow:0 0 0 2px rgba(34,211,238,.25)}
+.print-btn:active{transform:translateY(1px)}
+.print-btn:focus-visible{outline:2px solid #a7f3ce;outline-offset:2px}
   /* Chip hover (subtle) */
   ul.tags li:hover{background:rgba(0,212,106,0.16)}
 }
@@ -123,15 +132,22 @@ h2{break-after:avoid}
 .print-btn{
   -webkit-appearance:none;
   appearance:none;
-  display:inline-block;
-  padding:4px 8px;
-  border:1px solid var(--accent);
-  border-radius:2px;
-  background:rgba(0,212,106,0.08);
-  color:var(--fg);
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 12px;
+  border:1px solid var(--accent-2);
+  border-radius:4px;
+  background:var(--accent-2);
+  color:#0b0f12; /* dark text on cyan for contrast */
   cursor:pointer;
   font:inherit;
+  font-weight:600;
+  letter-spacing:.02em;
   line-height:1.2;
   background-clip:padding-box;
+  box-shadow:0 1px 0 rgba(0,0,0,.25), 0 0 0 2px rgba(34,211,238,.12) inset;
 }
+.print-btn::before{content:"⤓";font-weight:700}
+
 footer{display:flex;justify-content:center;padding:10px}
