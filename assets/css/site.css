@@ -72,6 +72,21 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;back
   a:hover{color:#a7f3ce;border-bottom-color:#a7f3ce}
   .manbar{border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);color:var(--fg)}
   hr{border-top:1px solid var(--line)}
+  /* Ensure on-screen elements show (hidden only on print) */
+  .no-print{display:block}
+  footer.no-print{display:flex}
+  /* Unify button with chips */
+  .print-btn{border:1px solid var(--accent-2);border-radius:4px;background:var(--accent-2);color:#0b0f12;padding:6px 12px;display:inline-flex;align-items:center;gap:8px}
+  .print-btn:hover{filter:brightness(1.05);box-shadow:0 0 0 2px rgba(34,211,238,.25)}
+  .print-btn:active{transform:translateY(1px)}
+  .print-btn:focus-visible{outline:2px solid #a7f3ce;outline-offset:2px}
+}
+  body{background:var(--bg);color:var(--fg)}
+  .meta{color:var(--muted)}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+  a:hover{color:#a7f3ce;border-bottom-color:#a7f3ce}
+  .manbar{border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);color:var(--fg)}
+  hr{border-top:1px solid var(--line)}
   /* Unify button with chips */
   .print-btn{
   -webkit-appearance:none;
@@ -105,7 +120,36 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;back
 
 /* Print tuning: keep to one A4 page; spacing tighter on paper */
 @media print{
+  /* Force white background and black text for print */
   @page{size:A4;margin:10mm}
+  html, body, .container{background:#ffffff !important;color:#000000 !important}
+  *{background:transparent !important;box-shadow:none !important}
+  /* Respect our colors (white bg), but keep them ink-friendly */
+  -webkit-print-color-adjust:exact; print-color-adjust:exact;
+
+  /* Smaller print font only */
+  html{font:9.75pt/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+
+  /* Hide screen-only UI */
+  .manbar{display:none !important}
+  .no-print{display:none !important}
+
+  /* Links and rules */
+  a{color:#000 !important;text-decoration:none;border:0}
+  hr{border-top:1px solid #000}
+  section h2{color:#000;margin:.3rem 0 .45rem}
+
+  /* Layout tightening */
+  .container{padding:0}
+  .two-col{grid-template-columns:38% 62%;gap:5mm}
+  section{margin:8px 0}
+  .item{margin-bottom:.4rem}
+
+  /* Lists */
+  :root{ --indent: clamp(11px, 1em, 16px); }
+  ul.compact{margin:.1rem 0 .4rem 0; padding-left:var(--indent); padding-inline-start:var(--indent)}
+  ul.tags li{background:transparent !important;border-color:#000 !important;color:#000}
+}
   /* Force light, ink-friendly print */
   :root{ --indent: clamp(11px, 1em, 16px); }
   *{-webkit-print-color-adjust:economy;print-color-adjust:economy}
