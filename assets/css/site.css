@@ -1,3 +1,4 @@
+
 :root{
   --fg:#e5e7eb;           /* terminal fg (light) */
   --muted:#9aa4b2;        /* terminal muted */
@@ -63,7 +64,7 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;back
 .small{font-size:.97em;color:var(--muted)}
 
 /* Screen-only: extra line spacing + justified text */
-@media screen{
+@media not print{
   /* Terminal look on screen */
   html{line-height:1.9}
   body{background:var(--bg);color:var(--fg)}
