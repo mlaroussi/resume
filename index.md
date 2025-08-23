@@ -42,7 +42,7 @@ title: "Mohammed Laroussi — Resume"
     <div class="small">{{ site.data.resume.interests | join: " · " }}</div>
   </section>
 
-  <section>
+  <section class="no-print">
     <h2>Links</h2>
     <div class="small">{% for l in site.data.resume.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% if forloop.last == false %} · {% endif %}{% endfor %}</div>
   </section>
