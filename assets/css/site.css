@@ -118,10 +118,10 @@ h2{break-after:avoid}
 }
 
 /* Icon font alignment (consistent baselines + spacing) */
-.bi{display:inline-block;font-size:1em;line-height:1;vertical-align:-0.20em}
-h2 .bi{width:1.15em;margin-right:8px;text-align:center;vertical-align:-0.22em;color:var(--accent)}
-.meta .bi{width:1.15em;margin-right:6px;text-align:center;vertical-align:-0.18em;color:var(--muted)}
-.print-btn .bi{margin-right:8px;vertical-align:-0.20em}
+.bi{display:inline-block;font-size:1em;line-height:1;vertical-align:.10em}
+h2 .bi{width:1.15em;margin-right:8px;text-align:center;vertical-align:.18em;color:var(--accent)}
+.meta .bi{width:1.15em;margin-right:6px;text-align:center;vertical-align:.12em;color:var(--muted)}
+.print-btn .bi{margin-right:8px;vertical-align:.12em}
 @media print{.bi{color:#000 !important}}
 
 /* ====== PRINT ONLY ====== */
