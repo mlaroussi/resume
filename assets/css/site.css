@@ -70,7 +70,7 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;back
 
 /* Footer */
 .no-print{display:block}
-footer{display:flex;justify-content:center;padding:10px}
+footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:10px}
 
 /* Avoid ugly breaks */
 section,.item{break-inside:avoid;page-break-inside:avoid}
@@ -85,7 +85,7 @@ h2{break-after:avoid}
   -webkit-print-color-adjust:exact;print-color-adjust:exact;
 
   /* Smaller print font only */
-  html{font:9.5pt/1.35 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+  html{font:9pt/1.32 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
 
   /* Hide screen-only UI */
   .manbar{display:none !important}
@@ -95,6 +95,7 @@ h2{break-after:avoid}
   a{color:#000 !important;text-decoration:none;border:0}
   hr{border-top:1px solid #000}
   section h2{color:#000;margin:.3rem 0 .45rem}
+  .meta, .small, .dates { color:#111 !important }
 
   /* Layout tightening */
   .container{padding:0}
