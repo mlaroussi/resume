@@ -20,7 +20,7 @@ title: "Mohammed Laroussi — Resume"
 
   <section>
     <h2>Core</h2>
-    <ul class="compact">
+    <ul class="compact flat">
       {% for c in site.data.resume.core_competencies %}<li>{{ c }}</li>{% endfor %}
     </ul>
   </section>
@@ -43,12 +43,14 @@ title: "Mohammed Laroussi — Resume"
 
   <section>
     <h2>Interests</h2>
-    <div class="small">{{ site.data.resume.interests | join: " · " }}</div>
+    <ul class="tags">
+      {% for i in site.data.resume.interests %}<li>{{ i }}</li>{% endfor %}
+    </ul>
   </section>
 
   <section>
     <h2>Certifications</h2>
-    <ul class="compact">
+    <ul class="compact flat">
       {% for c in site.data.resume.certifications %}<li>{{ c }}</li>{% endfor %}
     </ul>
   </section>

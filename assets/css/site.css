@@ -9,46 +9,53 @@
 *{box-sizing:border-box}
 html{font:12.25pt/1.6 system-ui,-apple-system,"Segoe UI",Inter,Roboto,Arial}
 body{margin:0;color:var(--fg);background:var(--bg)}
-.container{max-width:var(--max);margin:0 auto;padding:30px}
+.container{max-width:var(--max);margin:0 auto;padding:34px}
 a{color:var(--fg);text-decoration:underline}
-hr{border:0;border-top:1px solid var(--line);margin:12px 0}
+hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 
 /* Header */
-.header{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-.header h1{font-size:1.7rem;letter-spacing:.2px;margin:0}
+.header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.header h1{font-size:1.75rem;letter-spacing:.2px;margin:0}
 .header .subtitle{color:var(--muted)}
-.meta{color:var(--muted);margin-top:.2rem}
+.meta{color:var(--muted);margin-top:.25rem}
 .meta a{color:inherit}
 
 /* Intro full width */
-.intro{margin:.6rem 0 1.2rem}
+.intro{margin:.8rem 0 1.6rem}
 
 /* Two-column layout */
-.two-col{display:grid;grid-template-columns:1fr;gap:18px}
+.two-col{display:grid;grid-template-columns:1fr;gap:22px}
 .col{min-width:0}
 @media (min-width: 760px){
-  .two-col{grid-template-columns: 36% 1fr; gap:22px}
+  .two-col{grid-template-columns: 36% 1fr; gap:28px}
 }
 
-section{margin:20px 0 22px 0}
-section h2{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin:.45rem 0 .65rem;color:var(--accent)}
+/* Sections & headings */
+section{margin:28px 0 30px 0}
+section h2{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin:.55rem 0 .9rem;color:var(--accent)}
 
-ul.compact{margin:.2rem 0 .65rem 1.05rem}
-ul.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:.4rem 0}
-ul.tags li{padding:4px 9px;border:1px solid var(--line);border-radius:999px}
-.item{margin-bottom:.7rem}
+/* Lists */
+ul.compact{margin:.3rem 0 1rem .55rem}
+ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0}
+ul.tags li{padding:5px 10px;border:1px solid var(--line);border-radius:999px}
+
+/* Zero-indent bullets for specific lists */
+.flat{margin-left:0 !important;padding-left:0;list-style-position:inside}
+
+/* Items */
+.item{margin-bottom:1rem}
 .role{font-weight:600}
 .company{font-weight:600}
 .dates{color:var(--muted)}
-.small{font-size:.95em;color:var(--muted)}
+.small{font-size:.97em;color:var(--muted)}
 
 /* Languages list */
-ul.langlist{list-style:none;padding:0;margin:.25rem 0 .85rem 0}
-ul.langlist li{display:flex;justify-content:space-between;align-items:baseline;padding:6px 8px;border:1px solid var(--line);border-radius:10px;margin-bottom:6px}
+ul.langlist{list-style:none;padding:0;margin:.35rem 0 1rem 0}
+ul.langlist li{display:flex;justify-content:space-between;align-items:baseline;padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px}
 ul.langlist .lang{font-weight:600}
-ul.langlist .lvl{font-style:normal;color:var(--muted);font-size:.92em}
+ul.langlist .lvl{font-style:normal;color:var(--muted);font-size:.95em}
 
-/* Print tuning: keep to one A4 page and tighten spacing */
+/* Print tuning: keep to one A4 page; spacing tighter on paper */
 @media print{
   @page{size:A4;margin:10mm}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -58,7 +65,9 @@ ul.langlist .lvl{font-style:normal;color:var(--muted);font-size:.92em}
   html{font:10.5pt/1.35 system-ui,-apple-system,"Segoe UI",Inter,Roboto,Arial}
   .two-col{grid-template-columns: 38% 62%; gap:6mm}
   section{margin:10px 0 10px 0}
+  section h2{margin:.35rem 0 .5rem}
   .item{margin-bottom:.45rem}
+  ul.compact{margin:.15rem 0 .5rem .5rem}
   ul.langlist li{padding:2px 6px;margin-bottom:3px;border-color:#eceff3}
 }
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -67,7 +76,8 @@ ul.langlist .lvl{font-style:normal;color:var(--muted);font-size:.92em}
   .container{padding:0}
   html{font:10.5pt/1.35 system-ui,-apple-system,"Segoe UI",Inter,Roboto,Arial}
   .two-col{grid-template-columns: 38% 62%; gap:6mm}
-  section{margin-top:10px}
+  section{margin:10px 0 10px 0}
+  section h2{margin:.35rem 0 .5rem}
   .item{margin-bottom:.45rem}
   ul.langlist li{padding:2px 6px;margin-bottom:3px;border-color:#eceff3}
 }
