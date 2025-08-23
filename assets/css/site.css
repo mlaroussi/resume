@@ -9,8 +9,8 @@
   --indent: clamp(14px, 1.25em, 22px);
 }
 *{box-sizing:border-box}
-html{font:11pt/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;-webkit-text-size-adjust:100%}
-body{margin:0;color:var(--fg);background:var(--bg)}
+html{font:10.75pt/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .container{max-width:var(--max);margin:0 auto;padding:34px}
 a{color:var(--fg);text-decoration:underline}
 hr{border:0;border-top:1px solid var(--line);margin:14px 0}
@@ -52,7 +52,7 @@ ul.compact{
   padding-inline-start:var(--indent);
 }
 ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0}
-ul.tags li{padding:5px 10px;border:1px solid var(--line);border-radius:999px}
+ul.tags li{padding:4px 8px;border:1px solid #000;border-radius:2px}
 
 /* Items */
 .item{margin-bottom:1rem}
@@ -63,7 +63,7 @@ ul.tags li{padding:5px 10px;border:1px solid var(--line);border-radius:999px}
 
 /* Screen-only: extra line spacing + justified text */
 @media screen{
-  html{line-height:1.7}
+  html{line-height:1.9}
   .container, .intro, p, li{ text-align:justify; text-justify:inter-word; }
 }
 
