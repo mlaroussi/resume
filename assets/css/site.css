@@ -89,7 +89,7 @@ h2{break-after:avoid}
 footer{display:flex;justify-content:center;padding:10px}
 
 /* ===== Man-page theme (enabled when <body class="man">) ===== */
-.man html{font:12pt/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+body.man{font:12pt/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
 .man .container{max-width:860px}
 .man a{color:#0033cc;text-decoration:none;border-bottom:1px dotted #0033cc}
 .man hr{border-top:1px solid #000;margin:10px 0}
@@ -128,8 +128,8 @@ footer{display:flex;justify-content:center;padding:10px}
 
 /* Screen-only spacing for man theme */
 @media screen{
-  .man html{line-height:1.65}
-  .man .container,.man .intro,p,li{ text-align:justify; text-justify:inter-word; }
+  body.man{line-height:1.65}
+  .man .container, .man .intro, .man p, .man li { text-align:justify; text-justify:inter-word; }
 }
 
 /* Print: keep our existing print rules; man theme inherits them */
