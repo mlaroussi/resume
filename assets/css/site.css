@@ -1,9 +1,10 @@
 :root{
-  --fg:#0f172a;           /* slate-900 */
-  --muted:#475569;        /* slate-600 */
-  --line:#e2e8f0;         /* slate-200 */
-  --bg:#ffffff;
-  --accent:#2563eb;       /* blue-600 */
+  --fg:#e5e7eb;           /* terminal fg (light) */
+  --muted:#9aa4b2;        /* terminal muted */
+  --line:#233041;         /* subtle separator on dark */
+  --bg:#0b0f12;           /* terminal bg (dark) */
+  --accent:#00d46a;       /* terminal green */
+  --accent-2:#22d3ee;     /* cyan for alt accents */
   --max: 1000px;
   /* responsive list indent: scales with font-size, bounded */
   --indent: clamp(14px, 1.25em, 22px);
@@ -52,7 +53,7 @@ ul.compact{
   padding-inline-start:var(--indent);
 }
 ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0}
-ul.tags li{padding:4px 8px;border:1px solid #000;border-radius:2px}
+ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;background:rgba(0,212,106,0.08)}
 
 /* Items */
 .item{margin-bottom:1rem}
@@ -63,7 +64,20 @@ ul.tags li{padding:4px 8px;border:1px solid #000;border-radius:2px}
 
 /* Screen-only: extra line spacing + justified text */
 @media screen{
+  /* Terminal look on screen */
   html{line-height:1.9}
+  body{background:var(--bg);color:var(--fg)}
+  .meta{color:var(--muted)}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+  a:hover{color:#a7f3ce;border-bottom-color:#a7f3ce}
+  .manbar{border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);color:var(--fg)}
+  hr{border-top:1px solid var(--line)}
+  /* Unify button with chips */
+  .print-btn{border:1px solid var(--accent);border-radius:2px;background:transparent;color:var(--fg);padding:6px 12px}
+  .print-btn:hover{background:rgba(0,212,106,0.12)}
+  /* Chip hover (subtle) */
+  ul.tags li:hover{background:rgba(0,212,106,0.16)}
+}
   .container, .intro, p, li{ text-align:justify; text-justify:inter-word; }
 }
 
