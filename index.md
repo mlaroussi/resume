@@ -7,7 +7,11 @@ title: "Mohammed Laroussi — Resume"
   <div>
     <h1>{{ site.data.resume.name }}</h1>
     <div class="subtitle">{{ site.data.resume.title }}</div>
-    <div class="meta">{{ site.data.resume.location }} · <a href="mailto:{{ site.data.resume.email }}">{{ site.data.resume.email }}</a> · {{ site.data.resume.phone }}</div>
+    <div class="meta">
+  {{ site.data.resume.location }} · <a href="mailto:{{ site.data.resume.email }}">{{ site.data.resume.email }}</a> · {{ site.data.resume.phone }}
+  {% assign li = site.data.resume.links | where: "label", "LinkedIn" | first %}
+  <span class="no-print"> · <a href="{{ li.url }}">LinkedIn</a></span>
+</div>
   </div>
 </div>
 
@@ -53,10 +57,7 @@ title: "Mohammed Laroussi — Resume"
     </ul>
   </section>
 
-  <section class="no-print">
-    <h2>Links</h2>
-    <div class="small">{% for l in site.data.resume.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% if forloop.last == false %} · {% endif %}{% endfor %}</div>
-  </section>
+  
 
   </div>
   <div class="col">

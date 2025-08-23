@@ -103,7 +103,7 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;backgr
 .print-btn:focus-visible{outline:2px solid #a7f3ce;outline-offset:2px}
 
 /* Footer */
-.no-print{display:block}
+.no-print{display:initial}
 footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:10px;margin-block-end:clamp(32px,8vh,140px)}
 
 /* Avoid ugly breaks */
