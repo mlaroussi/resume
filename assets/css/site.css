@@ -171,7 +171,7 @@ h2 .bi{width:1.15em;margin-right:8px;text-align:center;vertical-align:.0em;color
   .two-col{grid-template-columns:38% 62%;gap:5mm}
   section{margin:8px 0}
   .item{margin-bottom:.4rem}
-
+ 
   /* Lists */
   :root{ --indent: clamp(11px, 1em, 16px); }
   ul.compact{margin:.1rem 0 .4rem 0; padding-left:var(--indent); padding-inline-start:var(--indent)}
