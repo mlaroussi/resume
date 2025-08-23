@@ -9,21 +9,13 @@
   --max: 1280px;          /* max readable width when boxed */
   --measure: 115ch;       /* target max line length (content-driven) */
   --indent: clamp(14px, 1.25em, 22px); /* responsive bullet indent */
-  --panel:#0e1419;        /* slightly lighter panel for boxed layout */
+  --panel:#111827;        /* higher-contrast panel for default bg */        /* slightly lighter panel for boxed layout */
   --pad: clamp(12px, 3vw, 34px); /* responsive side padding */
 }
 *{box-sizing:border-box}
 html{font:10.75pt/1.9 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;-webkit-text-size-adjust:100%}
-body{margin:0;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.container{
-  max-inline-size: min(100%, var(--measure));
-  margin-inline: auto;
-  padding-block: 30px; /* a touch more breathing room */
-  padding-inline: var(--pad);
-  background: var(--panel); /* enabled by default */
-  margin-block-end: clamp(24px, 5vh, 80px); /* keep content off the bottom edge */
-  container-type: inline-size; /* enable container queries */
-}
+body{margin:0;color:var(--fg);background:var(--panel);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.container{$1background:transparent;$2}
 a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
 a:hover{color:#a7f3ce;border-bottom-color:#a7f3ce}
 hr{border:0;border-top:1px solid var(--line);margin:14px 0}
