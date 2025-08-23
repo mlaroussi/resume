@@ -87,3 +87,49 @@ h2{break-after:avoid}
 /* Button */
 .print-btn{border:1px solid var(--line);padding:7px 11px;border-radius:10px;background:#fff;cursor:pointer}
 footer{display:flex;justify-content:center;padding:10px}
+
+/* ===== Man-page theme (enabled when <body class="man">) ===== */
+.man html{font:12pt/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+.man .container{max-width:860px}
+.man a{color:#0033cc;text-decoration:none;border-bottom:1px dotted #0033cc}
+.man hr{border-top:1px solid #000;margin:10px 0}
+.man .header{display:none} /* hide fancy header; man pages keep it minimal */
+
+/* Top ruler line like: NAME(1)  General Commands Manual  NAME(1) */
+.man .manbar{
+  font:10pt ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  display:flex;justify-content:space-between;gap:12px;
+  border-top:1px solid #000;border-bottom:1px solid #000;
+  padding:4px 0;margin:0 0 12px;
+}
+
+/* Section headings: uppercase, compact, no color accents */
+.man section{margin:18px 0 20px 0}
+.man section h2{
+  color:#000;margin:.25rem 0 .5rem;
+  font-size:.95rem;letter-spacing:.10em;text-transform:uppercase;
+}
+
+/* Lists: simple bullets with modest indent */
+.man ul.compact{
+  margin:.1rem 0 .8rem 0;
+  padding-left:var(--indent); padding-inline-start:var(--indent);
+  list-style:disc;
+}
+
+/* Chips simplified to thin boxes (Skills/Languages/Interests) */
+.man ul.tags{gap:6px;margin:.4rem 0}
+.man ul.tags li{padding:2px 6px;border:1px solid #000;border-radius:2px}
+
+/* Two-column stays, but a bit tighter like a manual */
+@media (min-width:760px){
+  .man .two-col{grid-template-columns:34% 1fr;gap:18px}
+}
+
+/* Screen-only spacing for man theme */
+@media screen{
+  .man html{line-height:1.65}
+  .man .container,.man .intro,p,li{ text-align:justify; text-justify:inter-word; }
+}
+
+/* Print: keep our existing print rules; man theme inherits them */
