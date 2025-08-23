@@ -60,6 +60,12 @@ ul.langlist li{display:flex;justify-content:space-between;align-items:baseline;p
 ul.langlist .lang{font-weight:600}
 ul.langlist .lvl{font-style:normal;color:var(--muted);font-size:.95em}
 
+/* Screen-only: extra line spacing + justified text */
+@media screen{
+  html{line-height:1.8}
+  .container, .intro, p, li{ text-align:justify; text-justify:inter-word }
+}
+
 /* Print tuning: keep to one A4 page; spacing tighter on paper */
 @media print{
   /* tighten indent slightly on paper */
@@ -76,7 +82,7 @@ ul.langlist .lvl{font-style:normal;color:var(--muted);font-size:.95em}
   .item{margin-bottom:.45rem}
   ul.compact{margin:.15rem 0 .5rem 0; padding-inline-start:var(--indent)}
   ul.langlist li{padding:2px 6px;margin-bottom:3px;border-color:#eceff3}
-} 
+}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .no-print{display:none !important}
   a{text-decoration:none}
