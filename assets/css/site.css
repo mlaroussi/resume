@@ -93,7 +93,7 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;backgr
   padding:6px 12px;border:1px solid var(--accent-2);border-radius:0;
   background:var(--accent-2);color:#0b0f12;cursor:pointer;font:inherit;font-weight:600;letter-spacing:.02em;line-height:1.2;background-clip:padding-box;
 }
-.print-btn::before{content:"⤓";font-weight:700}
+
 .print-btn:hover{filter:brightness(1.05)}
 .print-btn:active{transform:translateY(1px)}
 .print-btn:focus-visible{outline:2px solid #a7f3ce;outline-offset:2px}
@@ -116,6 +116,13 @@ h2{break-after:avoid}
 @container (min-width: 90ch){
   .two-col{ grid-template-columns:36% 1fr; gap:28px }
 }
+
+/* Icon font tweaks */
+.bi{font-size:1em;vertical-align:-0.15em;line-height:1}
+h2 .bi{margin-right:8px}
+.meta .bi{margin-right:6px}
+.print-btn .bi{margin-right:8px}
+@media print{.bi{color:#000 !important}}
 
 /* ====== PRINT ONLY ====== */
 @media print{
