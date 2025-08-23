@@ -28,10 +28,15 @@ hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 .manbar{
   font:10pt ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
   display:flex;justify-content:space-between;gap:12px;box-sizing:border-box;
-  width:100%;max-width:var(--max);
-  border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);
-  padding:4px 34px;margin:0 auto 12px;color:var(--fg)
+  max-width:var(--max);margin:0 auto 12px;padding:4px 34px;color:var(--fg);
+  position:relative; /* allow edge-to-edge rulers via pseudo elements */
 }
+.manbar::before,.manbar::after{
+  content:"";position:absolute;left:50%;transform:translateX(-50%);
+  width:100vw;border-top:1px solid var(--accent)
+}
+.manbar::before{top:0}
+.manbar::after{bottom:0}
 
 /* Intro full width */
 .intro{margin:.8rem 0 1.6rem}
