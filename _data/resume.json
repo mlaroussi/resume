@@ -1,44 +1,126 @@
 {
   "name": "Mohammed Laroussi",
-  "title": "Linux / Infra / DevOps Engineer",
-  "location": "Tangier, Morocco",
-  "email": "you@example.com",
+  "title": "Linux Expert (LFCS/LFCE) · Cloud (AWS) · Virtualization (VCP) · SysOps/Automation · ITSM",
+  "location": "Casablanca, Morocco",
+  "phone": "+212 638 385 809",
+  "email": "mnlaroussi@gmail.com",
   "links": [
-    {"label": "GitHub", "url": "https://github.com/yourhandle"},
-    {"label": "LinkedIn", "url": "https://www.linkedin.com/in/yourprofile"}
+    { "label": "Website", "url": "http://laroussi.me" },
+    { "label": "GitHub", "url": "https://github.com/mlaroussi" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/mlaroussi" }
   ],
-  "summary": "Linux/DevOps engineer focused on RHEL, Foreman/Katello, and large-scale automation. Builds secure images, hardens CI/CD, and runs content management for big fleets.",
-  "skills": ["RHEL 8/9/10","Foreman/Katello","Ansible","Packer","VMware vSphere","Kickstart","GPG/Repos","Networking","CI/CD","Bash","Python"],
+  "summary": "Linux/Infra engineer with deep experience across RHEL/Ubuntu, automation, and secure image engineering. Led OS master template design, compliance hardening, and high-scale operations for physical, VMware ESXi, and container environments. Writes clear documentation (EN/FR), mentors teams, and ships robust systems balancing security, performance, and operability. (LFCS, LFCE, VCP-DCV 2023)",
+  "core_competencies": [
+    "Linux Engineering (RHEL/CentOS, Ubuntu; systemd, SELinux, packaging, repo/GPG)",
+    "Automation & CI/CD (Bash, Python, Terraform; pipeline hardening; image builds)",
+    "Virtualization & Containers (VMware vSphere/ESXi, Docker)",
+    "Cloud & Infra (AWS/Azure basics, DNS/DHCP, mail/web/db stacks, VPN/firewalling)",
+    "Ops/SRE (monitoring, performance, incident response, runbooks, docs EN/FR)",
+    "Security & Compliance (baselines, hardening, audit & remediation)"
+  ],
   "experience": [
     {
-      "role": "Senior Linux/DevOps Engineer",
-      "company": "Your Company",
-      "dates": "2022–Present",
+      "role": "Linux Expert",
+      "company": "Sofrecom Maroc (for Orange S.A.)",
+      "location": "Rabat",
+      "dates": "Jan 2024 – Present",
       "bullets": [
-        "Foreman/Katello at 50k+ nodes; sync plan split, mirror optimization, automated Content View publish/promote.",
-        "RHEL migrations (8→9/10), module stream management, repo signing and key rotation.",
-        "Secure image pipeline (Kickstart+Packer+vSphere), CI hardening and compliance checks."
+        "Design & maintain Linux OS master templates (RHEL/Ubuntu) for physical, ESX and Docker images",
+        "Provide technical direction; ensure security and quality compliance for deployments",
+        "Install, configure and operate Linux servers; troubleshoot complex builds",
+        "Author FR/EN documentation (specs, bulletins, guidelines)",
+        "Build/optimize automation scripts for provisioning, validation and lifecycle tasks",
+        "Collaborate with cross-functional teams; mentor members; coordinate timelines and reviews",
+        "Perform QA/code reviews and continuous improvement in Agile (Jira/Confluence)"
+      ],
+      "tech": ["RHEL","Ubuntu","VMware ESXi","Docker","Bash","Python","Jira","Confluence"]
+    },
+    {
+      "role": "Senior Linux Systems Engineer",
+      "company": "INTELCIA",
+      "location": "Casablanca",
+      "dates": "Jun 2022 – Dec 2023",
+      "bullets": [
+        "Ensured availability, reliability, performance and security of IT systems",
+        "Contributed to structuring projects and provided advanced technical support",
+        "Supported L3 technicians and helped grow team capabilities"
       ]
     },
     {
-      "role": "Linux Systems Engineer",
-      "company": "Previous Company",
-      "dates": "2019–2022",
+      "role": "IT Systems Engineer",
+      "company": "Freelance",
+      "location": "Tangier",
+      "dates": "Jun 2020 – May 2022",
       "bullets": [
-        "Fleet automation with Ansible; patch compliance, safe rollbacks.",
-        "Observability with Prometheus/Grafana; incident runbooks and SLOs."
-      ]
+        "Designed tailored architectures and security policies",
+        "Installed/configured web, DB, mail and DNS services",
+        "Automated ops via scripting; provided technical support and documentation",
+        "Maintained several web apps (features, bug fixes, performance refactors)"
+      ],
+      "tech": ["Apache","MySQL","PostgreSQL","PowerMTA","Postfix","Bind","PowerDNS","Linux","AWS","Azure","Python","Bash","PHP","JS","HTML","CSS","Git"]
+    },
+    {
+      "role": "IT Systems Engineer",
+      "company": "Presence Interactive",
+      "location": "Tangier",
+      "dates": "Sep 2016 – Mar 2020",
+      "bullets": [
+        "Monitored systems and network communications",
+        "Conceived strategies and configurations for services and infrastructure",
+        "Designed/deployed security policies (netfilter/iptables)",
+        "Developed internal tools (Bash/PHP/Python) and provided L3 support",
+        "Oversaw support team and tutored new members"
+      ],
+      "tech": ["Linux","CentOS","Apache","MySQL","Postfix","PowerMTA","PowerDNS","iptables","Bash","PHP","Python"]
+    },
+    {
+      "role": "IT Systems Administrator",
+      "company": "Presence Interactive",
+      "location": "Tangier",
+      "dates": "Jun 2015 – Sep 2016",
+      "bullets": [
+        "Managed hundreds of dedicated/VPS servers remotely",
+        "Linux admin (CentOS/RHEL); configured web/DB/mail/DNS and network services",
+        "Performed periodic maintenance and updates; L1/L2 support; software troubleshooting"
+      ],
+      "tech": ["RHEL","CentOS","Apache","Nginx","MySQL","Postfix","PowerMTA","PowerDNS","Bash"]
+    },
+    {
+      "role": "Web Developer",
+      "company": "Maroc Pub Media",
+      "location": "Tangier",
+      "dates": "Mar 2014 – Jun 2015",
+      "bullets": [
+        "Client discovery and requirements gathering",
+        "Built AMP-stack sites/webapps and CMS solutions (WordPress/Drupal)",
+        "Provided support and technical assistance"
+      ],
+      "tech": ["Apache","PHP","MySQL","HTML","CSS","JS","WordPress","Drupal"]
     }
   ],
-  "projects": [
-    {"name":"CV Auto-Publish for Katello","desc":"Webhooks + automation to publish & promote on new content","url":"https://github.com/yourhandle/project1"},
-    {"name":"Secure Kickstarts @ Scale","desc":"Reproducible builds, post-install hardening, SBOM export","url":"https://github.com/yourhandle/project2"},
-    {"name":"Packer/vSphere Golden Images","desc":"Parameterized builds with pre-flight checks","url":"https://github.com/yourhandle/project3"}
-  ],
   "education": [
-    {"where": "Your University", "what": "BSc — Field", "extra": ""}
+    {"degree": "M.Sc. — IT Systems & Security Engineering", "institution": "ENSI (Tangier)"},
+    {"degree": "Master’s — IT Projects Management", "institution": "FEDE (Geneva)"},
+    {"degree": "Bachelor — Information Technology", "institution": "ENSI"},
+    {"degree": "Specialized IT Technician — Multimedia Development", "institution": "ISMONTIC (Tangier)"}
   ],
-  "certs": ["RHCSA","RHCE"],
-  "languages": ["English","French","Arabic"],
-  "interests": ["Aviation","Space exploration","Cooking"]
+  "certifications": [
+    "VMware Certified Professional — Data Center Virtualization 2023 (VCP-DCV)",
+    "Linux Foundation Certified Engineer (LFCE)",
+    "Linux Foundation Certified System Administrator (LFCS)",
+    "Microsoft Office Specialist",
+    "Duolingo Certified Educator"
+  ],
+  "skills": [
+    "RHEL/CentOS","Ubuntu","systemd","SELinux","Repo/GPG","Bash","Python","Terraform",
+    "VMware vSphere/ESXi","Docker","AWS/Azure basics","DNS/DHCP","Mail/Web/DB stacks",
+    "iptables","Git","Jira","Confluence","WordPress/Drupal (legacy)"
+  ],
+  "languages": [
+    {"name":"Arabic","level":"Native/Bilingual"},
+    {"name":"French","level":"Native/Bilingual"},
+    {"name":"English","level":"Full Professional"},
+    {"name":"Spanish","level":"Elementary"}
+  ],
+  "interests": ["Aviation","Photography","Diving","Traveling"]
 }
