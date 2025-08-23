@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="Resume of {{ site.data.resume.name }}" />
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css?v=12">
 </head>
 <body class="man">
+  <div class="manbar">
+    <span>LAROUSSI(1)</span>
+    <span>General Commands Manual</span>
+    <span>LAROUSSI(1)</span>
+  </div>
   <main class="container">{{ content }}</main>
   <footer class="no-print" aria-hidden="true">
     <button onclick="window.print()" class="print-btn">Download PDF</button>
