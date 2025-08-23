@@ -40,6 +40,9 @@ ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6
 ul.tags li{padding:5px 10px;border:1px solid var(--line);border-radius:999px}
 
 /* Zero-indent bullets for specific lists */
+/* Tighter indent bullets for specific lists */
+.tinyindent{margin-left:.35rem;padding-left:.2rem;list-style-position:outside}
+/* Zero-indent option if ever needed */
 .flat{margin-left:0 !important;padding-left:0;list-style-position:inside}
 
 /* Items */
