@@ -73,8 +73,21 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:2px;back
   .manbar{border-top:1px solid var(--accent);border-bottom:1px solid var(--accent);color:var(--fg)}
   hr{border-top:1px solid var(--line)}
   /* Unify button with chips */
-  .print-btn{border:1px solid var(--accent);border-radius:2px;background:transparent;color:var(--fg);padding:6px 12px}
-  .print-btn:hover{background:rgba(0,212,106,0.12)}
+  .print-btn{
+  -webkit-appearance:none;
+  appearance:none;
+  display:inline-block;
+  padding:4px 8px;
+  border:1px solid var(--accent);
+  border-radius:2px;
+  background:rgba(0,212,106,0.08);
+  color:var(--fg);
+  cursor:pointer;
+  font:inherit;
+  line-height:1.2;
+  background-clip:padding-box;
+}
+  .print-btn:hover{background:rgba(0,212,106,0.16)}
   /* Chip hover (subtle) */
   ul.tags li:hover{background:rgba(0,212,106,0.16)}
 }
@@ -107,5 +120,18 @@ section, .item{break-inside:avoid;page-break-inside:avoid}
 h2{break-after:avoid}
 
 /* Button */
-.print-btn{border:1px solid var(--line);padding:7px 11px;border-radius:10px;background:#fff;cursor:pointer}
+.print-btn{
+  -webkit-appearance:none;
+  appearance:none;
+  display:inline-block;
+  padding:4px 8px;
+  border:1px solid var(--accent);
+  border-radius:2px;
+  background:rgba(0,212,106,0.08);
+  color:var(--fg);
+  cursor:pointer;
+  font:inherit;
+  line-height:1.2;
+  background-clip:padding-box;
+}
 footer{display:flex;justify-content:center;padding:10px}
