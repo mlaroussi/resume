@@ -1,3 +1,4 @@
+
 ---
 layout: default
 title: "Mohammed Laroussi — Resume"
@@ -20,7 +21,7 @@ title: "Mohammed Laroussi — Resume"
 
   <section>
     <h2>Core</h2>
-    <ul class="compact tinyindent">
+    <ul class="compact">
       {% for c in site.data.resume.core_competencies %}<li>{{ c }}</li>{% endfor %}
     </ul>
   </section>
@@ -48,7 +49,7 @@ title: "Mohammed Laroussi — Resume"
 
   <section>
     <h2>Certifications</h2>
-    <ul class="compact tinyindent">
+    <ul class="compact">
       {% for c in site.data.resume.certifications %}<li>{{ c }}</li>{% endfor %}
     </ul>
   </section>

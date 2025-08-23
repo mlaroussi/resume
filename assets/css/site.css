@@ -35,7 +35,7 @@ section{margin:28px 0 30px 0}
 section h2{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin:.55rem 0 .9rem;color:var(--accent)}
 
 /* Lists */
-ul.compact{margin:.3rem 0 1rem .55rem}
+ul.compact{margin:.28rem 0 1rem .28rem}
 ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0}
 ul.tags li{padding:5px 10px;border:1px solid var(--line);border-radius:999px}
 
