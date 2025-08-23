@@ -85,7 +85,8 @@ h2{break-after:avoid}
   -webkit-print-color-adjust:exact;print-color-adjust:exact;
 
   /* Smaller print font only */
-  html{font:9pt/1.32 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+  html{font:8.75pt/1.28 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+
 
   /* Hide screen-only UI */
   .manbar{display:none !important}
@@ -95,7 +96,7 @@ h2{break-after:avoid}
   a{color:#000 !important;text-decoration:none;border:0}
   hr{border-top:1px solid #000}
   section h2{color:#000;margin:.3rem 0 .45rem}
-  .meta, .small, .dates { color:#111 !important }
+  .meta, .small, .dates { color:#333 !important }
 
   /* Layout tightening */
   .container{padding:0}
