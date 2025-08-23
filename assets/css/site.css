@@ -6,13 +6,15 @@
   --bg:#0b0f12;           /* terminal bg (dark) */
   --accent:#00d46a;       /* terminal green */
   --accent-2:#22d3ee;     /* cyan for alt accents */
-  --max: 1000px;
+  --max: 1160px;          /* widened box for large screens */
   --indent: clamp(14px, 1.25em, 22px); /* responsive bullet indent */
+  --panel:#0e1419;        /* slightly lighter panel for boxed layout */
+  --pad:18px;             /* horizontal padding; increases on wide screens */
 }
 *{box-sizing:border-box}
 html{font:10.75pt/1.9 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;-webkit-text-size-adjust:100%}
 body{margin:0;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.container{max-width:var(--max);margin:0 auto;padding:34px}
+.container{max-width:none;margin:0;padding:24px var(--pad)}
 a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
 a:hover{color:#a7f3ce;border-bottom-color:#a7f3ce}
 hr{border:0;border-top:1px solid var(--line);margin:14px 0}
@@ -28,9 +30,12 @@ hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 .manbar{
   font:10pt ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
   display:flex;justify-content:space-between;gap:12px;box-sizing:border-box;
-  max-width:var(--max);margin:0 auto 12px;padding:4px 34px;color:var(--fg);
-  position:relative; /* allow edge-to-edge rulers via pseudo elements */
+  width:100%;max-width:none;margin:0 0 12px;padding:4px var(--pad);color:var(--fg);
+  position:relative; /* edge-to-edge rulers via pseudo elements */
 }
+.manbar::before,.manbar::after{content:"";position:absolute;left:50%;transform:translateX(-50%);width:100vw;border-top:1px solid var(--accent)}
+.manbar::before{top:0}
+.manbar::after{bottom:0}
 .manbar::before,.manbar::after{
   content:"";position:absolute;left:50%;transform:translateX(-50%);
   width:100vw;border-top:1px solid var(--accent)
@@ -45,6 +50,13 @@ hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 .two-col{display:grid;grid-template-columns:1fr;gap:22px}
 .col{min-width:0}
 @media (min-width: 760px){.two-col{grid-template-columns: 36% 1fr; gap:28px}}
+
+/* Boxed layout on large screens */
+@media (min-width: 1200px){
+  :root{ --pad:34px }
+  .container{ max-width: var(--max); margin: 28px auto; padding: 30px var(--pad); border:1px solid var(--line); background: var(--panel); }
+  .manbar{ max-width: var(--max); margin: 0 auto 12px; padding: 4px var(--pad); }
+}
 
 /* Sections & headings */
 section{margin:28px 0 30px 0}
