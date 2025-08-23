@@ -84,12 +84,33 @@ h2{break-after:avoid}
   *{background:transparent !important;box-shadow:none !important}
   -webkit-print-color-adjust:exact;print-color-adjust:exact;
 
-  /* Smaller print font only */
-  html{font:8pt/1.25 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
-
-
+  /* Smaller print font ONLY — scale rem by shrinking the root */
+  :root{ font-size:11px !important }
+  html{ font-size:11px !important; line-height:1.25 !important }
+  body{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !important }
 
   /* Hide screen-only UI */
+  .manbar{display:none !important}
+  .no-print{display:none !important}
+
+  /* Links and rules */
+  a{color:#000 !important;text-decoration:none;border:0}
+  hr{border-top:1px solid #000}
+  section h2{color:#000;margin:.3rem 0 .45rem}
+
+  /* Layout tightening */
+  .container{padding:0}
+  .two-col{grid-template-columns:38% 62%;gap:5mm}
+  section{margin:8px 0}
+  .item{margin-bottom:.4rem}
+
+  /* Lists */
+  :root{ --indent: clamp(11px, 1em, 16px); }
+  ul.compact{margin:.1rem 0 .4rem 0; padding-left:var(--indent); padding-inline-start:var(--indent)}
+  /* Muted text slightly darker, not black */
+  .meta, .small, .dates { color:#555 !important }
+  ul.tags li{background:transparent !important;border-color:#666 !important;color:#000}
+
   .manbar{display:none !important}
   .no-print{display:none !important}
 
