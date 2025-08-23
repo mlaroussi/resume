@@ -5,19 +5,19 @@
   --bg:#ffffff;
   --accent:#2563eb;       /* blue-600 */
   --max: 1000px;
-  /* responsive list indent: scales with font-size, bounded */
+  /* responsive list indent */
   --indent: clamp(14px, 1.25em, 22px);
 }
 *{box-sizing:border-box}
-html{font:12.25pt/1.6 system-ui,-apple-system,"Segoe UI",Inter,Roboto,Arial}
-body{margin:0;color:var(--fg);background:var(--bg)}
+html{font:11pt/1.55 system-ui,-apple-system,"Segoe UI",Inter,Roboto,Arial;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
 .container{max-width:var(--max);margin:0 auto;padding:34px}
 a{color:var(--fg);text-decoration:underline}
 hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 
 /* Header */
 .header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.header h1{font-size:1.75rem;letter-spacing:.2px;margin:0}
+.header h1{font-size:1.6rem;letter-spacing:.2px;margin:0}
 .header .subtitle{color:var(--muted)}
 .meta{color:var(--muted);margin-top:.25rem}
 .meta a{color:inherit}
@@ -37,12 +37,7 @@ section{margin:28px 0 30px 0}
 section h2{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin:.55rem 0 .9rem;color:var(--accent)}
 
 /* Lists */
-ul.compact{
-  margin:.28rem 0 1rem 0;
-  /* Safari-friendly: provide both logical & physical padding */
-  padding-left:var(--indent);
-  padding-inline-start:var(--indent);
-}
+ul.compact{margin:.28rem 0 1rem 0; padding-inline-start:var(--indent)}
 ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0}
 ul.tags li{padding:5px 10px;border:1px solid var(--line);border-radius:999px}
 
@@ -53,16 +48,14 @@ ul.tags li{padding:5px 10px;border:1px solid var(--line);border-radius:999px}
 .dates{color:var(--muted)}
 .small{font-size:.97em;color:var(--muted)}
 
-/* Screen-only: extra line spacing + justified text */
+/* Online-only: extra line spacing + justified text (Safari friendly) */
 @media screen{
-  html{line-height:1.8}
-  .container, .intro, p, li{ text-align:justify; text-justify:inter-word; }
+  html{line-height:1.7}
+  .container, .intro, p, li{ text-align:justify; text-justify:inter-word; -webkit-hyphens:auto; hyphens:auto }
 }
 
 /* Print tuning: keep to one A4 page; spacing tighter on paper */
 @media print{
-  /* tighten indent slightly on paper */
-  :root{ --indent: clamp(12px, 1.1em, 18px); }
   @page{size:A4;margin:10mm}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .no-print{display:none !important}
@@ -73,11 +66,7 @@ ul.tags li{padding:5px 10px;border:1px solid var(--line);border-radius:999px}
   section{margin:10px 0 10px 0}
   section h2{margin:.35rem 0 .5rem}
   .item{margin-bottom:.45rem}
-  ul.compact{
-    margin:.15rem 0 .5rem 0;
-    padding-left:var(--indent);
-    padding-inline-start:var(--indent);
-  }
+  :root{ --indent: clamp(12px, 1.1em, 18px); }
 }
 
 /* Avoid ugly breaks */
@@ -85,51 +74,5 @@ section, .item{break-inside:avoid;page-break-inside:avoid}
 h2{break-after:avoid}
 
 /* Button */
-.print-btn{border:1px solid var(--line);padding:7px 11px;border-radius:10px;background:#fff;cursor:pointer}
+.print-btn{border:1px solid var(--line);padding:7px 11px;border-radius:10px;background:#fff}
 footer{display:flex;justify-content:center;padding:10px}
-
-/* ===== Man-page theme (enabled when <body class="man">) ===== */
-body.man{font:12pt/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
-.man .container{max-width:860px}
-.man a{color:#0033cc;text-decoration:none;border-bottom:1px dotted #0033cc}
-.man hr{border-top:1px solid #000;margin:10px 0}
-.man .header{display:none} /* hide fancy header; man pages keep it minimal */
-
-/* Top ruler line like: NAME(1)  General Commands Manual  NAME(1) */
-.man .manbar{
-  font:10pt ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  display:flex;justify-content:space-between;gap:12px;
-  border-top:1px solid #000;border-bottom:1px solid #000;
-  padding:4px 0;margin:0 0 12px;
-}
-
-/* Section headings: uppercase, compact, no color accents */
-.man section{margin:18px 0 20px 0}
-.man section h2{
-  color:#000;margin:.25rem 0 .5rem;
-  font-size:.95rem;letter-spacing:.10em;text-transform:uppercase;
-}
-
-/* Lists: simple bullets with modest indent */
-.man ul.compact{
-  margin:.1rem 0 .8rem 0;
-  padding-left:var(--indent); padding-inline-start:var(--indent);
-  list-style:disc;
-}
-
-/* Chips simplified to thin boxes (Skills/Languages/Interests) */
-.man ul.tags{gap:6px;margin:.4rem 0}
-.man ul.tags li{padding:2px 6px;border:1px solid #000;border-radius:2px}
-
-/* Two-column stays, but a bit tighter like a manual */
-@media (min-width:760px){
-  .man .two-col{grid-template-columns:34% 1fr;gap:18px}
-}
-
-/* Screen-only spacing for man theme */
-@media screen{
-  body.man{line-height:1.65}
-  .man .container, .man .intro, .man p, .man li { text-align:justify; text-justify:inter-word; }
-}
-
-/* Print: keep our existing print rules; man theme inherits them */
