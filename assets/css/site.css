@@ -20,11 +20,14 @@ hr{border:0;border-top:1px solid var(--line);margin:10px 0}
 .meta{color:var(--muted);margin-top:.15rem}
 .meta a{color:inherit}
 
+/* Intro full width */
+.intro{margin:.5rem 0 1rem}
+
 /* Two-column layout */
 .two-col{display:grid;grid-template-columns:1fr;gap:16px}
 .col{min-width:0}
-@media (min-width: 900px){
-  .two-col{grid-template-columns: 36% 1fr; gap:20px}
+@media (min-width: 760px){
+  .two-col{grid-template-columns: 36% 1fr; gap:18px}
 }
 
 section{margin-top:12px}

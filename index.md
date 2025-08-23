@@ -1,3 +1,4 @@
+
 ---
 layout: default
 title: "Mohammed Laroussi — Resume"
@@ -13,10 +14,10 @@ title: "Mohammed Laroussi — Resume"
 
 <hr/>
 
+<div class="intro">{{ site.data.resume.summary }}</div>
+
 <div class="two-col">
   <div class="col">
-
-  {{ site.data.resume.summary }}
 
   <section>
     <h2>Core</h2>
@@ -35,6 +36,11 @@ title: "Mohammed Laroussi — Resume"
   <section>
     <h2>Languages</h2>
     <div class="small">{% for l in site.data.resume.languages %}{{ l.name }} — {{ l.level }}{% if forloop.last == false %} · {% endif %}{% endfor %}</div>
+  </section>
+
+  <section>
+    <h2>Interests</h2>
+    <div class="small">{{ site.data.resume.interests | join: " · " }}</div>
   </section>
 
   <section>
@@ -58,15 +64,6 @@ title: "Mohammed Laroussi — Resume"
   </section>
 
   <section>
-    <h2>Projects</h2>
-    <ul class="compact">
-      {% for p in site.data.resume.projects %}
-      <li><strong>{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</strong> — {{ p.desc }}</li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
     <h2>Education</h2>
     <ul class="compact">
       {% for e in site.data.resume.education %}<li>{{ e.degree }} — {{ e.institution }}</li>{% endfor %}
@@ -78,11 +75,6 @@ title: "Mohammed Laroussi — Resume"
     <ul class="compact">
       {% for c in site.data.resume.certifications %}<li>{{ c }}</li>{% endfor %}
     </ul>
-  </section>
-
-  <section>
-    <h2>Interests</h2>
-    <div class="small">{{ site.data.resume.interests | join: " · " }}</div>
   </section>
 
   </div>
