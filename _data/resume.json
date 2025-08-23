@@ -96,7 +96,7 @@
   "education": [
     {"degree": "M.Sc. — IT Systems & Security Engineering", "institution": "ENSI (Tangier)"},
     {"degree": "Master’s — IT Projects Management", "institution": "FEDE (Geneva)"},
-    {"degree": "Bachelor — Information Technology", "institution": "ENSI"},
+    {"degree": "Bachelor — Information Technology", "institution": "ENSI (Tangier)"},
     {"degree": "Specialized IT Technician — Multimedia Development", "institution": "ISMONTIC (Tangier)"}
   ],
   "certifications": [
@@ -107,7 +107,7 @@
     "Duolingo Certified Educator"
   ],
   "skills": [
-    "RHEL/CentOS","Ubuntu","systemd","SELinux","Repo/GPG","Kickstart","PXE","Packer",
+    "RHEL","Ubuntu","systemd","SELinux","Repo/GPG","Kickstart","PXE","Packer",
     "VMware vSphere/ESXi","Docker","Bash","Python","Terraform",
     "DNS/DHCP","Mail/Web/DB stacks","iptables","Git","Jira","Confluence"
   ],
