@@ -6,7 +6,7 @@
   --bg:#0b0f12;           /* terminal bg (dark) */
   --accent:#00d46a;       /* terminal green */
   --accent-2:#22d3ee;     /* cyan for alt accents */
-  --max: 1160px;          /* widened box for large screens */
+  --max: 1280px;          /* widened box for large screens */
   --indent: clamp(14px, 1.25em, 22px); /* responsive bullet indent */
   --panel:#0e1419;        /* slightly lighter panel for boxed layout */
   --pad:18px;             /* horizontal padding; increases on wide screens */
@@ -52,8 +52,11 @@ hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 @media (min-width: 760px){.two-col{grid-template-columns: 36% 1fr; gap:28px}}
 
 /* Boxed layout on large screens */
-@media (min-width: 1200px){
+@media (min-width: 1800px){
   :root{ --pad:34px }
+  .container{ max-width: var(--max); margin: 28px auto; padding: 30px var(--pad); border:0; background: transparent; }
+  .manbar{ max-width: var(--max); margin: 0 auto 12px; padding: 4px var(--pad); }
+}
   .container{ max-width: var(--max); margin: 28px auto; padding: 30px var(--pad); border:1px solid var(--line); background: var(--panel); }
   .manbar{ max-width: var(--max); margin: 0 auto 12px; padding: 4px var(--pad); }
 }
