@@ -6,11 +6,7 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="Resume of {{ site.data.resume.name }}" />
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
-  <!-- Cache bust for Safari/others -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css">
 </head>
 <body>
   <div class="manbar">
@@ -20,7 +16,7 @@
   </div>
   <main class="container">{{ content }}</main>
   <footer class="no-print" aria-hidden="true">
-    <button onclick="window.print()" class="print-btn">Download PDF</button>
+    <small class="copyright">© {{ "now" | date: "%Y" }} Mohammed Laroussi — All rights reserved.</small>
   </footer>
 </body>
 </html>

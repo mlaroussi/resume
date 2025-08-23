@@ -8,10 +8,13 @@ title: "Mohammed Laroussi — Resume"
     <h1>{{ site.data.resume.name }}</h1>
     <div class="subtitle">{{ site.data.resume.title }}</div>
     <div class="meta">
-  {{ site.data.resume.location }} · <a href="mailto:{{ site.data.resume.email }}">{{ site.data.resume.email }}</a> · {{ site.data.resume.phone }}
-  {% assign li = site.data.resume.links | where: "label", "LinkedIn" | first %}
-  <span class="no-print"> · <a href="{{ li.url }}">LinkedIn</a></span>
-</div>
+      {{ site.data.resume.location }} · <a href="mailto:{{ site.data.resume.email }}">{{ site.data.resume.email }}</a> · {{ site.data.resume.phone }}
+      {% assign li = site.data.resume.links | where: "label", "LinkedIn" | first %}
+      <span class="no-print"> · <a href="{{ li.url }}">LinkedIn</a></span>
+    </div>
+  </div>
+  <div class="no-print header-actions">
+    <button onclick="window.print()" class="print-btn">Download PDF</button>
   </div>
 </div>
 
@@ -37,6 +40,13 @@ title: "Mohammed Laroussi — Resume"
   </section>
 
   <section>
+    <h2>Certifications</h2>
+    <ul class="compact">
+      {% for c in site.data.resume.certifications %}<li>{{ c }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section>
     <h2>Languages</h2>
     <ul class="tags">
       {% for l in site.data.resume.languages %}<li>{{ l.name }} — {{ l.level }}</li>{% endfor %}
@@ -47,13 +57,6 @@ title: "Mohammed Laroussi — Resume"
     <h2>Interests</h2>
     <ul class="tags">
       {% for i in site.data.resume.interests %}<li>{{ i }}</li>{% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h2>Certifications</h2>
-    <ul class="compact">
-      {% for c in site.data.resume.certifications %}<li>{{ c }}</li>{% endfor %}
     </ul>
   </section>
 

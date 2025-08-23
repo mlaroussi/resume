@@ -21,7 +21,7 @@ a:hover{color:#a7f3ce;border-bottom-color:#a7f3ce}
 hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 
 /* Header */
-.header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
 .header h1{font-size:1.6rem;letter-spacing:.2px;margin:0}
 .header .subtitle{color:var(--muted)}
 .meta{color:var(--muted);margin-top:.25rem}
@@ -73,7 +73,7 @@ section h2{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin:.
 
 /* Lists */
 ul.compact{margin:.28rem 0 1rem 0; padding-left:var(--indent); padding-inline-start:var(--indent)}
-ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0}
+ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0 1.2rem}
 ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;background:rgba(0,212,106,0.08)}
 
 /* Items */
@@ -103,8 +103,10 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;backgr
 .print-btn:focus-visible{outline:2px solid #a7f3ce;outline-offset:2px}
 
 /* Footer */
-.no-print{display:initial}
-footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:10px;margin-block-end:clamp(32px,8vh,140px)}
+footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:12px;margin-block-start:24px;margin-block-end:clamp(32px,6vh,120px);border-top:1px solid var(--line)}
+footer .copyright{color:var(--muted);font-size:.9em}
+
+footer{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;padding:12px;margin-block-start:24px;margin-block-end:clamp(32px,6vh,120px);border-top:1px solid var(--line)}
 
 /* Avoid ugly breaks */
 section,.item{break-inside:avoid;page-break-inside:avoid}
