@@ -65,7 +65,7 @@ title: "Mohammed Laroussi — Resume"
     <h2>Experience</h2>
     {% for job in site.data.resume.experience %}
     <div class="item">
-      <span class="role">{{ job.role }}</span> — <span class="company">{{ job.company }}</span> · <span class="dates">{{ job.dates }}</span>
+      <span class="role">{{ job.role }}</span> @ <span class="company">{{ job.company }}</span> · <span class="dates">{{ job.dates }}</span>
       <ul class="compact">
         {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
       </ul>

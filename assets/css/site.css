@@ -83,6 +83,10 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;backgr
 .dates{color:var(--muted)}
 .small{font-size:.97em;color:var(--muted)}
 
+/* Separator between role and company as colored "@" */
+.item .role::after{content:" @ "; color:var(--accent-2); font-weight:700}
+
+
 /* Download button (stand-out cyan) */
 .print-btn{
   -webkit-appearance:none;appearance:none;display:inline-flex;align-items:center;gap:8px;
@@ -133,7 +137,22 @@ h2{break-after:avoid}
   hr{border-top:1px solid #000}
   section h2{color:#000;margin:.3rem 0 .45rem}
 
+  /* Color of inserted @ for print */
+  .item .role::after{ color:#000 !important }
+
   /* Layout tightening */
+  .container{padding:0}
+  .two-col{grid-template-columns:38% 62%;gap:5mm}
+  section{margin:8px 0}
+  .item{margin-bottom:.4rem}
+
+  /* Lists */
+  :root{ --indent: clamp(11px, 1em, 16px); }
+  ul.compact{margin:.1rem 0 .4rem 0; padding-left:var(--indent); padding-inline-start:var(--indent)}
+  /* Muted text slightly darker, not black */
+  .meta, .small, .dates { color:#555 !important }
+  ul.tags li{background:transparent !important;border-color:#666 !important;color:#000}
+
   .container{padding:0}
   .two-col{grid-template-columns:38% 62%;gap:5mm}
   section{margin:8px 0}
