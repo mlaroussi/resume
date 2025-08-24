@@ -77,8 +77,8 @@ ul.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6
 ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;background:rgba(0,212,106,0.08)}
 
 /* Languages meter (overall bar per language) */
-ul.langs{list-style:none;padding:0;margin:.6rem 0 1.2rem;display:grid;gap:8px}
-ul.langs li{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+ul.langs{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0 1.2rem}
+ul.langs li{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:4px 8px;border:1px solid var(--accent);border-radius:0;background:rgba(0,212,106,0.08)}
 ul.langs .name{font-weight:600}
 .meter{display:grid;grid-auto-flow:column;gap:4px}
 .meter .cell{width:14px;height:8px;border:1px solid var(--accent);background:transparent}
@@ -89,10 +89,12 @@ ul.langs .name{font-weight:600}
 .role{font-weight:600}
 .company{font-weight:600}
 .dates{color:var(--muted)}
+
 .small{font-size:.97em;color:var(--muted)}
+.print-only{display:none}
 
 /* Separator between role and company as colored "@" */
-.item .role::after{content:" @ "; color:var(--accent-2); font-weight:700}
+.item .at{color:var(--accent-2);font-weight:700}
 
 
 /* Download button (stand-out cyan) */
@@ -151,8 +153,9 @@ h2 .bi{width:1.15em;margin-right:8px;text-align:center;vertical-align:.0em;color
   hr{border-top:1px solid #000}
   section h2{color:#000;margin:.3rem 0 .45rem}
 
-  /* Color of inserted @ for print */
-  .item .role::after{ color:#000 !important }
+  /* Color of @ separator for print */
+  .item .at{ color:#000 !important }
+  .print-only{display:inline !important}
 
   /* Layout tightening */
   .container{padding:0}

@@ -12,7 +12,9 @@ title: "Mohammed Laroussi — Resume"
       <a href="mailto:{{ site.data.resume.email }}"><i class="bi bi-envelope"></i> {{ site.data.resume.email }}</a> ·
       <i class="bi bi-telephone"></i> {{ site.data.resume.phone }}
       {% assign li = site.data.resume.links | where: "label", "LinkedIn" | first %}
+      {% assign web = site.data.resume.links | where: "label", "Website" | first %}
       <span class="no-print"> · <a href="{{ li.url }}"><i class="bi bi-linkedin"></i> LinkedIn</a></span>
+      <span class="print-only"> · <a href="{{ web.url }}">Laroussi.me</a></span>
     </div>
   </div>
   <div class="no-print header-actions">
@@ -55,14 +57,13 @@ title: "Mohammed Laroussi — Resume"
       {% assign n = l.score | default: 4 | plus: 0 %}
       {% if n > 5 %}{% assign n = 5 %}{% endif %}
       {% if n < 0 %}{% assign n = 0 %}{% endif %}
-      <li>
+      <li{% if l.level %} title="{{ l.level }}"{% endif %}>
         <span class="name">{{ l.name }}</span>
         <span class="meter" aria-label="Overall proficiency {{ n }}/5">
           {% for i in (1..5) %}
           <span class="cell {% if i <= n %}on{% endif %}"></span>
           {% endfor %}
         </span>
-        {% if l.level %}<span class="lvl small no-print">{{ l.level }}</span>{% endif %}
       </li>
       {% endfor %}
     </ul>
@@ -85,7 +86,7 @@ title: "Mohammed Laroussi — Resume"
     <h2><i class="bi bi-briefcase"></i> Experience</h2>
     {% for job in site.data.resume.experience %}
     <div class="item">
-      <span class="role">{{ job.role }}</span> <span class="company">{{ job.company }}</span> · <span class="dates">{{ job.dates }}</span>
+      <span class="role">{{ job.role }}</span> <span class="at">@</span> <span class="company">{{ job.company }}</span> · <span class="dates">{{ job.dates }}</span>
       <ul class="compact">
         {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
       </ul>
