@@ -79,11 +79,10 @@ ul.tags li{padding:4px 8px;border:1px solid var(--accent);border-radius:0;backgr
 /* Languages meter (overall bar per language) */
 ul.langs{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:.6rem 0 1.2rem}
 ul.langs li{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:4px 8px;border:1px solid var(--accent);border-radius:0;background:rgba(0,212,106,0.08)}
-ul.langs .name{font-weight:600}
-ul.langs .meter,ul.langs .lvl{display:none}
-ul.langs li:hover .meter{display:grid}
-ul.langs li:hover .lvl{display:inline}
-
+ul.langs li .meter{display:grid}
+.meter .cell.on{background:var(--accent)}
+.meter{display:grid;grid-auto-flow:column;gap:4px}
+.meter .cell{width:14px;height:8px;border:1px solid var(--accent);background:transparent}
 
 /* Items */
 .item{margin-bottom:1rem}
