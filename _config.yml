@@ -1,0 +1,8 @@
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins: []
+exclude: ["node_modules", "Gemfile", "Gemfile.lock"]
+permalink: pretty
+url: "https://mlaroussi.github.io"
+baseurl: "/resume"

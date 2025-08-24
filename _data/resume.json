@@ -1,0 +1,130 @@
+{
+  "name": "Mohammed Laroussi",
+  "title": "🐧 Linux · ☁️ Cloud · 🗄️ Virtualization · ⚙️ SysOps/Automation · 🗒️ ITSM ",
+  "location": "Morocco",
+  "phone": "+212 638 385 809",
+  "email": "mnlaroussi@gmail.com",
+  "links": [
+    { "label": "Website", "url": "http://laroussi.me" },
+    { "label": "GitHub", "url": "https://github.com/mlaroussi" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/mlaroussi" }
+  ],
+  "summary": "Linux engineer focused on RHEL/Ubuntu, reproducible image pipelines, and secure systems. I design and maintain OS master templates for physical/ESXi/Docker targets, enforce hardening (SELinux, systemd, CIS‑style baselines), and automate everything with Bash/Python. Comfortable toggling between deep‑dive debugging and clean docs (EN/FR).",
+  "core_competencies": [
+    "Linux engineering (RHEL/CentOS, Ubuntu; systemd, SELinux, packaging, repo/GPG)",
+    "Image engineering (Kickstart/PXE, Packer, vSphere golden images, Docker)",
+    "Automation (Bash, Python; idempotent tooling; CI patterns)",
+    "Infra & services (DNS/DHCP, mail/web/db stacks; networking & firewalls)",
+    "Ops & SRE (observability, performance, incident response, runbooks)",
+    "Security & compliance (baseline hardening, audit & remediation)"
+  ],
+  "experience": [
+    {
+      "role": "Linux Expert",
+      "company": "Sofrecom (for Orange)",
+      "location": "Rabat",
+      "dates": "Jan 2024 – Present",
+      "bullets": [
+        "Own the design and maintenance of Linux OS master templates (RHEL/Ubuntu) for physical, ESXi and Docker targets.",
+        "Codify hardening: SELinux enforcing, secure systemd units, SSH/MOTD/governance, repo signing (GPG) and rotation.",
+        "Build small but sharp automation (Bash/Python) for provisioning/validation; keep PRs reviewable and lint‑clean.",
+        "Author crisp FR/EN docs: specs, guidelines, operational bulletins.",
+        "Collaborate across teams; mentor peers; drive QA and code reviews in Agile (Jira/Confluence)."
+      ],
+      "tech": ["RHEL","Ubuntu","VMware ESXi","Docker","Kickstart","Packer","Bash","Python",]
+    },
+    {
+      "role": "Senior Linux Systems Engineer",
+      "company": "Intelcia",
+      "location": "Casablanca",
+      "dates": "Jun 2022 – Dec 2023",
+      "bullets": [
+        "Kept business‑critical systems available, fast, and secure; handled performance deep dives and incident response.",
+        "Supported L3 engineers; helped structure projects and standardize operating procedures."
+      ]
+    },
+    {
+      "role": "IT Systems Engineer",
+      "company": "Freelance",
+      "location": "Tangier",
+      "dates": "Jun 2020 – May 2022",
+      "bullets": [
+        "Designed tailored architectures and security policies; delivered installs/config for web, DB, mail, DNS.",
+        "Automated routine ops with scripts; wrote documentation and provided long‑term support.",
+        "Maintained several web apps: features, bug fixes, and performance refactors."
+      ],
+      "tech": ["Apache","Nginx","MySQL","PostgreSQL","PowerMTA","Postfix","Bind","PowerDNS","Linux","AWS","Azure","Python","Bash","PHP","JS","HTML","CSS","Git"]
+    },
+    {
+      "role": "IT Systems Engineer",
+      "company": "PI Marketing",
+      "location": "Tangier",
+      "dates": "Sep 2016 – Mar 2020",
+      "bullets": [
+        "Monitored systems and network comms; designed strategies and service configurations.",
+        "Implemented security policies (netfilter/iptables); built internal tools (Bash/PHP/Python).",
+        "Provided L3 support; onboarded and tutored new team members."
+      ]
+    },
+    {
+      "role": "IT Systems Administrator",
+      "company": "Presence Interactive",
+      "location": "Tangier",
+      "dates": "Jun 2015 – Sep 2016",
+      "bullets": [
+        "Managed a few hundred dedicated/VPS servers remotely (Linux admin: CentOS/RHEL).",
+        "Configured web/DB/mail/DNS and system‑level networking; ran maintenance/updates and L1/L2 support."
+      ]
+    },
+    {
+      "role": "Web Developer",
+      "company": "Maroc Pub Media",
+      "location": "Tangier",
+      "dates": "Mar 2014 – Jun 2015",
+      "bullets": [
+        "Gathered requirements; built AMP‑stack sites/webapps and CMS-based solutions (WordPress/Drupal); Provided support and technical assistance."
+      ]
+    }
+  ],
+  "projects": [
+    {"name":"OS Master Templates @ Scale","desc":"Standardized images for physical/ESXi/Docker with codified hardening and validation.","url":"#"},
+    {"name":"Secure Kickstarts & Golden Images","desc":"Reproducible Packer/vSphere builds; post‑install hardening; baseline validation.","url":"#"},
+    {"name":"Repo/GPG Governance","desc":"Key rotation, signature enforcement, and streamlined mirror/sync strategies.","url":"#"}
+  ],
+  "education": [
+    {"degree": "Master’s of Sc. — IT Systems & Security Engineering", "institution": "ENSI (Tangier)"},
+    {"degree": "Master’s — IT Projects Management", "institution": "FEDE (Geneva)"},
+    {"degree": "Bachelor — Information Technology", "institution": "ENSI (Tangier)"},
+    {"degree": "Specialized IT Technician — Multimedia Development", "institution": "ISMONTIC (Tangier)"}
+  ],
+  "certifications": [
+    "Linux Foundation Certified Engineer (LFCE)",
+    "Linux Foundation Certified System Administrator (LFCS)",
+    "AWS Certified Solutions Architect - Associate",
+    "AWS Certified Cloud Practitioner",
+    "VMware Certified Professional — Data Center Virtualization (VCP‑DCV)",
+    "ITIL 4 - Foundation"
+  ],
+  "skills": [
+    "RHEL","Ubuntu","Debian",
+    "SELinux",
+    "Kickstart","Packer","Ansible","Terraform","Red Hat Satellite",
+    "Bash","Python","Powershell",
+    "Git","Gitlab CI",
+    "vSphere","Hyper-V","Docker",
+    "AWS","Azure","GCP",
+    "Bind","PowerDNS","DNS","DHCP",
+    "Nginx","Apache",
+    "Postfix","PowerMTA",
+    "PostgreSQL","MySQL","SQL",
+    "Veeam",
+    "Jira","Confluence",
+    "PHP"
+  ],
+  "languages": [
+    {"name":"English","level":"Fluent","score":5},
+    {"name":"French","level":"Professional","score":4},
+    {"name":"Arabic","level":"Native","score":5}
+  ],
+  "interests": ["Aviation","Photography","Diving","Traveling"]
+}
