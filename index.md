@@ -55,14 +55,13 @@ title: "Mohammed Laroussi — Resume"
       {% assign n = l.score | default: 4 | plus: 0 %}
       {% if n > 5 %}{% assign n = 5 %}{% endif %}
       {% if n < 0 %}{% assign n = 0 %}{% endif %}
-      <li>
+      <li{% if l.level %} title="{{ l.level }}"{% endif %}>
         <span class="name">{{ l.name }}</span>
         <span class="meter" aria-label="Overall proficiency {{ n }}/5">
           {% for i in (1..5) %}
           <span class="cell {% if i <= n %}on{% endif %}"></span>
           {% endfor %}
         </span>
-        {% if l.level %}<span class="lvl small no-print">{{ l.level }}</span>{% endif %}
       </li>
       {% endfor %}
     </ul>
